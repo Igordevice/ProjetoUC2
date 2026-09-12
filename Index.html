@@ -30,23 +30,103 @@
                 <button class="cores" id="preto"></button>
             </div>
 
-           <div>
-            <button id="login">
-                Começar Grátis
-            </button>
-           </div>
+            <div>
+                <button id="login">
+                    Começar Grátis
+                </button>
+            </div>
         </header>
         <!--Fim da Header-->
 
-        <div id="container"> ● PARA PESSOAS TEA, FAMILIARES E PROFISSIONAIS DE SAÚDE</div>
+        <!--Início da body geral-->
+        <section id="hero">
+            <div id="container"> ● PARA PESSOAS TEA, FAMILIARES E PROFISSIONAIS DE SAÚDE</div>
 
-       <h1 id="frase_rotina">Sua rotina, <span class="destaque">no seu ritmo</span>.</h1>
+            <h1 id="frase_rotina">Sua rotina, <span class="destaque">no seu ritmo</span>.</h1>
 
-       <p id="planejamento">Planejamento visual, IA que decompõe tarefas e acompanhamento online, tudo pensado para o seu sistema nervoso.</p>
+            <p id="planejamento">Planejamento visual, IA que decompõe tarefas e acompanhamento online, tudo pensado para
+                o seu sistema nervoso.</p>
 
-       <div id="img menino"> 
-        <img src=""
-       </div>
+            <div id="menino"></div>
+
+            <div id="card-rotina">
+                <div class="card-rotina-header">
+                    <span class="card-rotina-data">Segunda, 31 Ago</span>
+                    <span class="card-rotina-progresso">2/8</span>
+                </div>
+                <div class="card-rotina-barra">
+                    <div class="card-rotina-barra-preenchida"></div>
+                </div>
+                <ul class="card-rotina-tarefas">
+                    <li class="tarefa concluida">
+                        <input type="checkbox" checked>
+                        <span>Tomar banho</span>
+                        <span class="horario">07:30</span>
+                    </li>
+                    <li class="tarefa concluida">
+                        <input type="checkbox" checked>
+                        <span>Café da manhã</span>
+                        <span class="horario">08:00</span>
+                    </li>
+                    <li class="tarefa">
+                        <input type="checkbox">
+                        <span>Estudar matemática</span>
+                        <span class="horario">09:00</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Botões -->
+            <div id="botoes-hero">
+                <button id="btn-comecar">Começar gratuitamente</button>
+                <button id="btn-ver-como-funciona">▶ Ver como funciona</button>
+            </div>
+
+            <!-- Estatísticas -->
+            <div id="estatisticas">
+                <div class="stat">
+                    <span class="stat-numero">12000+</span>
+                    <span class="stat-label">usuários</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-numero">94%</span>
+                    <span class="stat-label">menos ansiedade</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-numero">380+</span>
+                    <span class="stat-label">terapeutas</span>
+                </div>
+            </div>
+
+            <!-- Personalizar tema -->
+            <div id="personalizar-tema">
+                <span id="personalizar-tema-titulo">PERSONALIZAR TEMA</span>
+                <div class="temas-lista">
+                    <div class="tema-item">
+                        <button class="tema-cor selecionado" id="tema-azul"></button>
+                        <span class="tema-nome">Azul Calma</span>
+                    </div>
+                    <div class="tema-item">
+                        <button class="tema-cor" id="tema-verde"></button>
+                        <span class="tema-nome">Verde Menta</span>
+                    </div>
+                    <div class="tema-item">
+                        <button class="tema-cor" id="tema-roxo"></button>
+                        <span class="tema-nome">Lilás Conforto</span>
+                    </div>
+                    <div class="tema-item">
+                        <button class="tema-cor" id="tema-marrom"></button>
+                        <span class="tema-nome">Areia Quente</span>
+                    </div>
+                    <div class="tema-item">
+                        <button class="tema-cor" id="tema-preto"></button>
+                        <span class="tema-nome">Alto Contraste</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 </body>
 
