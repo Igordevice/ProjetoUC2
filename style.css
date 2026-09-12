@@ -1,0 +1,381 @@
+/* Estrutura Principal */
+.container {
+    width: 100%;
+    padding: 96px 32px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Header/Topo */
+.badge-tag {
+    background-color: #E8F1F8;
+    border-radius: 99px;
+    padding: 4px 15px;
+    margin-bottom: 12px;
+    align-self: center;
+}
+
+.quem-usa {
+    color: #5C88BF;
+    font-size: 11px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.titulo {
+    color: #1C2F44;
+    font-size: 44px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    line-height: 66px;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 48px;
+}
+
+/* Categorias */
+.categoria {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.subtitulo1, .subtitulo2 {
+    color: #5A6F84;
+    font-size: 11px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Grid de Cards */
+.lista-cards {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.card {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0px 2px 20px rgba(92, 136, 191, 0.05);
+    border: 1px solid #D6E7F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-profissional {
+    border-color: rgba(123, 179, 160, 0.40);
+}
+
+.card-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/* Estrelas e Selos */
+.estrelas {
+    color: #5C88BF;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.estrelas-prof {
+    color: #7BB3A0;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.selo-prof {
+    background: rgba(123, 179, 160, 0.09);
+    color: #7BB3A0;
+    font-size: 11px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 99px;
+}
+
+/* Textos do Card */
+.depoimento1, .depoimento2, .depoimento3,
+.depoimento4, .depoimento5, .depoimento6 {
+    color: #1C2F44;
+    font-size: 15px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    line-height: 26.25px;
+    margin-bottom: 22px;
+}
+
+/* Autor */
+.autor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.autor img {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+}
+
+.nome1, .nome2, .nome3, .nome4, .nome5, .nome6 {
+    color: #1C2F44;
+    font-size: 14px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.tag1, .tag2, .tag3, .tag4, .tag5, .tag6 {
+
+    color: #5A6F84;
+     font-size: 12px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+/* Reset Básico de Iniciante */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+}
+
+.container-planos {
+    width: 100%;
+    background-color: #F2F7FB;
+    padding: 96px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho */
+.badge-planos {
+    background-color: #E8F1F8;
+    border-radius: 99px;
+    padding: 4px 15px;
+    margin-bottom: 12px;
+}
+
+.badge-planos span {
+    color: #5C88BF;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.titulo-planos {
+    color: #1C2F44;
+    font-size: 44px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Toggle Mensal/Anual */
+.toggle-container {
+    background: #FFFFFF;
+    border: 1px solid #D6E7F5;
+    border-radius: 14px;
+    padding: 4px;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 48px;
+}
+
+.btn-toggle {
+    border: none;
+    background: transparent;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5A6F84;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-toggle.ativo {
+    background: #5C88BF;
+    color: #FFFFFF;
+}
+
+.desconto {
+    background: #E4F3EE;
+    color: #7BB3A0;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 99px;
+    margin-left: 4px;
+}
+
+/* Grid de Cards */
+.grid-planos {
+    display: flex;
+    gap: 24px;
+    max-width: 1280px;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card-plano {
+    flex: 1;
+    background: #FFFFFF;
+    border: 1px solid #D6E7F5;
+    border-radius: 20px;
+    padding: 32px;
+    position: relative;
+    box-shadow: 0px 2px 20px rgba(92, 136, 191, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-destaque {
+    border: 2px solid #5C88BF;
+    box-shadow: 0px 20px 60px rgba(92, 136, 191, 0.13);
+}
+
+.badge-destaque {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #5C88BF;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 99px;
+}
+
+/* Elementos do Card */
+.icone-plano {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.icon-cinza { background: #F2F7FB; }
+.icon-azul { background: rgba(92, 136, 191, 0.13); }
+.icon-verde { background: rgba(123, 179, 160, 0.13); }
+
+.tag-sub {
+    color: #5A6F84;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nome-plano {
+    color: #1C2F44;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.preco-plano {
+    color: #5A6F84;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.preco-plano span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.preco-azul { color: #5C88BF; }
+.preco-verde { color: #7BB3A0; }
+
+/* Listas */
+.lista-recursos {
+    list-style: none;
+    margin-bottom: 32px;
+    flex-grow: 1;
+}
+
+.lista-recursos li {
+    color: #1C2F44;
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+    background: #F2F7FB;
+    border-radius: 6px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    color: #5A6F84;
+}
+
+.check-azul { background: rgba(92, 136, 191, 0.13); color: #5C88BF; }
+.check-verde { background: rgba(123, 179, 160, 0.13); color: #7BB3A0; }
+
+/* Botões */
+.btn-card {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #D6E7F5;
+    color: #5C88BF;
+}
+
+.btn-azul {
+    background: #5C88BF;
+    color: white;
+    box-shadow: 0px 6px 20px rgba(92, 136, 191, 0.25);
+}
+
+.btn-verde {
+    background: #7BB3A0;
+    color: white;
+    box-shadow: 0px 6px 20px rgba(123, 179, 160, 0.25);
+}
+
+.nota-rodape {
+    color: #5A6F84;
+    font-size: 13px;
+    margin-top: 24px;
+    text-align: center;
+}
+
