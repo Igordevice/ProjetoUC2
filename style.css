@@ -16,7 +16,6 @@ body {
     gap: 30px;
 }
 
-
 #header_menu {
     width: 100%;
     height: 68.8px;
@@ -26,10 +25,10 @@ body {
     align-items: center;
 }
 
-#hero{
+#hero {
     position: relative;
     display: flow-root;
-    left: 100px;
+    padding-left: 100px;
 }
 
 #name {
@@ -53,7 +52,6 @@ body {
     line-height: 21px;
 }
 
-
 #botao {
     position: relative;
     display: flex;
@@ -63,8 +61,6 @@ body {
     width: 140px;
     padding-right: 120px;
 }
-
-
 
 .cores {
     width: 22px;
@@ -120,14 +116,14 @@ body {
     background: #5C88BF;
     box-shadow: 0 4px 16px 0 rgba(92, 136, 191, 0.25);
     margin-right: 80px;
-
 }
 
 /*Fim da Header*/
 
+/*Início da body geral*/
 #container {
     position: absolute;
-    top:70px;
+    top: 70px;
     left: 80px;
     display: flex;
     width: 500px;
@@ -145,7 +141,6 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 18px;
-    /* 150% */
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -155,17 +150,13 @@ body {
     font-family: Lexend;
     font-size: 56px;
     font-style: normal;
-    line-height: 60.48px;
     color: #1C2F44;
-    font-family: Lexend;
-    font-style: normal;
     font-weight: 800;
     line-height: 60.48px;
     letter-spacing: -2px;
     margin-top: 130px;
     margin-left: 80px;
 }
-
 
 .destaque {
     background: linear-gradient(135deg, #5C88BF 0%, #7BB3A0 100%);
@@ -186,18 +177,17 @@ body {
     margin-left: 80px;
 }
 
-
-#menino{
+#menino {
     position: absolute;
     z-index: 1;
-    background-image: url(imagens/menino.png) ;
+    background-image: url(imagens/menino.png);
     width: 600px;
     height: 440px;
     background-size: cover;
     left: 800px;
-    top: 131.2px;;
+    top: 131.2px;
     border-radius: 100px;
-} 
+}
 
 #card-rotina {
     position: absolute;
@@ -244,7 +234,7 @@ body {
 }
 
 .card-rotina-barra-preenchida {
-    width: 25%; 
+    width: 25%;
     height: 100%;
     background: #5C88BF;
     border-radius: 99px;
@@ -405,4 +395,584 @@ body {
     font-family: Lexend;
     font-size: 11px;
     font-weight: 500;
+}
+
+/*Fim da body geral*/
+
+/*Início da segunda page*/
+
+#faixa-destaques {
+    width: 100%;
+    background: linear-gradient(90deg, #5C88BF 0%, #7BA5D1 100%);
+    padding: 16px 0;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.destaques-lista {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-around;
+}
+
+.destaque-item {
+    color: #FFF;
+    font-family: Lexend;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Seção "Como funciona" */
+#como-funciona {
+    padding: 80px;
+    text-align: center;
+}
+
+.secao-label {
+    display: block;
+    color: #5C88BF;
+    font-family: Lexend;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+/* Abas */
+.abas-usuario {
+    display: inline-flex;
+    background: #EAF1F9;
+    border-radius: 12px;
+    padding: 4px;
+    gap: 4px;
+    margin-bottom: 48px;
+}
+
+.aba {
+    background: transparent;
+    color: #5A6F84;
+    font-family: Lexend;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.aba-ativa {
+    background: #5C88BF;
+    color: #FFF;
+}
+
+/* Cards */
+.cards-funcionamento {
+    display: flex;
+    gap: 24px;
+}
+
+/* Conteúdo das abas: TEA começa escondido */
+.conteudo-aba-tea {
+    display: none;
+}
+
+.card-funcionamento {
+    flex: 1;
+    background: #FFF;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: left;
+    box-shadow: 0 4px 16px 0 rgba(28, 47, 68, 0.06);
+}
+
+.card-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #EAF1F9;
+    color: #5C88BF;
+    font-family: Lexend;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.card-funcionamento h3 {
+    color: #1C2F44;
+    font-family: Lexend;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card-funcionamento p {
+    color: #5A6F84;
+    font-family: Lexend;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* Módulo Rotina Visual */
+#modulo-rotina-visual {
+    padding: 80px;
+    text-align: center;
+}
+
+.modulo-label {
+    display: inline-block;
+    background: #EAF1F9;
+    color: #5C88BF;
+    font-family: Lexend;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 16px;
+    border-radius: 99px;
+    margin-bottom: 20px;
+}
+
+.modulo-titulo {
+    color: #1C2F44;
+    font-family: Lexend;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.modulo-descricao {
+    color: #5A6F84;
+    font-family: Lexend;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+}
+
+.modulo-checklist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check-icone {
+    color: #5C88BF;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.check-item div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.check-titulo {
+    color: #1C2F44;
+    font-family: Lexend;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.check-descricao {
+    color: #5A6F84;
+    font-family: Lexend;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.cards-modulo {
+    display: flex;
+    gap: 24px;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+}
+
+/* ===== CARD DA ROTINA ===== */
+.card-sua-rotina {
+    flex: 1;
+    background: #FFF;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 16px 0 rgba(28, 47, 68, 0.08);
+}
+
+.rotina-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.rotina-data {
+    display: block;
+    color: #5A6F84;
+    font-family: Lexend;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.rotina-titulo {
+    color: #1C2F44;
+    font-family: Lexend;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.rotina-progresso {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rotina-progresso-numero {
+    color: #5C88BF;
+    font-family: Lexend;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.rotina-progresso-total {
+    color: #A9B7C4;
+    font-weight: 500;
+}
+
+.rotina-progresso-label {
+    color: #A9B7C4;
+    font-family: Lexend;
+    font-size: 11px;
+}
+
+.rotina-barra {
+    width: 100%;
+    height: 4px;
+    background: #EAF1F9;
+    border-radius: 99px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.rotina-barra-preenchida {
+    width: 25%;
+    height: 100%;
+    background: #5C88BF;
+}
+
+.rotina-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.rotina-tarefa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 8px;
+    border-radius: 10px;
+}
+
+.rotina-tarefa input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #5C88BF;
+    cursor: pointer;
+    flex: none;
+}
+
+.tarefa-horario {
+    color: #A9B7C4;
+    font-family: Lexend;
+    font-size: 12px;
+    width: 40px;
+    flex: none;
+}
+
+.tarefa-nome {
+    flex: 1;
+    color: #1C2F44;
+    font-family: Lexend;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tarefa-duracao {
+    color: #A9B7C4;
+    font-family: Lexend;
+    font-size: 12px;
+    flex: none;
+}
+
+.rotina-tarefa.concluida {
+    background: #F5F8FB;
+}
+
+.rotina-tarefa.concluida .tarefa-nome,
+.rotina-tarefa.concluida .tarefa-horario {
+    color: #C2CDD8;
+    text-decoration: line-through;
+}
+
+.rotina-tarefa.pausa {
+    background: #EAF6EE;
+}
+
+.rotina-tarefa.pausa .tarefa-horario,
+.rotina-tarefa.pausa .tarefa-nome,
+.rotina-tarefa.pausa .tarefa-duracao {
+    color: #4C8C5C;
+    font-weight: 600;
+}
+
+/* ===== CARD DE ANOTAÇÕES ===== */
+.card-anotacoes {
+    flex: 1;
+    background: #FDF9E9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px 0 rgba(28, 47, 68, 0.08);
+}
+
+.anotacoes-topo {
+    background: #5C88BF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+.anotacoes-bolinhas {
+    display: flex;
+    gap: 8px;
+}
+
+.anotacoes-bolinhas span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    display: block;
+}
+
+.anotacoes-label {
+    color: #FFF;
+    font-family: Lexend;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.anotacoes-corpo {
+    padding: 20px;
+    background-image: repeating-linear-gradient(to bottom,
+            transparent,
+            transparent 27px,
+            #E5DFC0 28px);
+}
+
+.anotacoes-titulo {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #1C2F44;
+    font-family: Lexend;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.anotacoes-titulo::placeholder {
+    color: #B8B08A;
+}
+
+.anotacoes-texto {
+    display: block;
+    width: 100%;
+    height: 180px;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    color: #5A6F84;
+    font-family: Lexend;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.anotacoes-texto::placeholder {
+    color: #B8B08A;
+}
+
+.anotacoes-salvar {
+    display: block;
+    margin-left: auto;
+    background: #C7DBEF;
+    color: #FFF;
+    font-family: Lexend;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*Início do modal de cadastro*/
+#modal-overlay {
+    display: none;
+    /* JS troca pra "flex" quando abrir */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#modal-criar-conta {
+    background: #FFF;
+    width: 400px;
+    padding: 32px;
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.2);
+}
+
+#modal-fechar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    background: #F2F7FB;
+    border: none;
+    border-radius: 50%;
+    color: #5A6F84;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.modal-titulo {
+    color: #1C2F44;
+    font-family: Lexend;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.modal-passo {
+    display: block;
+    color: #5A6F84;
+    font-family: Lexend;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.modal-barra-progresso {
+    width: 100%;
+    height: 5px;
+    background: #EAF1F9;
+    border-radius: 99px;
+    margin-bottom: 28px;
+    overflow: hidden;
+}
+
+.modal-barra-preenchida {
+    width: 50%;
+    /* Passo 1 = metade. No Passo 2, o JS muda pra 100% */
+    height: 100%;
+    background: #5C88BF;
+    transition: width 0.3s ease;
+}
+
+/* Passo 2 começa escondido */
+.modal-conteudo-2 {
+    display: none;
+}
+
+.modal-campo {
+    margin-bottom: 20px;
+}
+
+.modal-campo label {
+    display: block;
+    color: #1C2F44;
+    font-family: Lexend;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.modal-campo input {
+    width: 100%;
+    background: #F2F7FB;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: #1C2F44;
+    font-family: Lexend;
+    font-size: 14px;
+}
+
+.modal-campo input::placeholder {
+    color: #A9B7C4;
+}
+
+.modal-btn-continuar {
+    display: block;
+    width: 100%;
+    background: #5C88BF;
+    color: #FFF;
+    font-family: Lexend;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.modal-termos {
+    text-align: center;
+    color: #5A6F84;
+    font-family: Lexend;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.modal-termos a {
+    color: #5C88BF;
+    font-weight: 600;
+    text-decoration: none;
 }
