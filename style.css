@@ -1250,7 +1250,10 @@ body {
 
 /*Início do CTA Final*/
 #cta-final {
-    background: linear-gradient(135deg, #1C2F44 0%, #33496A 55%, #4A6C99 100%);
+    background: linear-gradient(135deg,
+            color-mix(in srgb, var(--cor-principal) 55%, #1C2F44 45%) 0%,
+            var(--cor-principal) 60%,
+            var(--cor-secundaria) 100%);
     padding: 100px 80px;
     text-align: center;
 }
@@ -1360,7 +1363,7 @@ body {
 }
 
 .footer-badge {
-    background: #EAF1F9;
+    background: var(--grad-1);
     color: var(--cor-principal);
     font-family: Lexend;
     font-size: 11px;
@@ -1403,7 +1406,7 @@ body {
 
 #footer-divisor {
     height: 1px;
-    background: #EAF1F9;
+    background: var(--grad-1);
 }
 
 #footer-base {
