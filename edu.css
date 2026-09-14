@@ -1,320 +1,440 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
+
+/* Tela inteira */
 body {
-    font-family: "Lexend", Arial, sans-serif;
-    background: #ffffff;
-    color: #1C2F44;
+    width: 100%;
     min-height: 100vh;
+    background: #f4f9fc;
 }
 
+
+/* Container principal */
 .pagina {
     width: 100%;
     min-height: 100vh;
+
     display: flex;
     align-items: center;
-    gap: 70px;
-    padding: 45px 5%;
+    justify-content: center;
+
+    gap: 80px;
+
+    padding: 60px 7%;
+
+    box-sizing: border-box;
 }
+
+
+/* =========================================================
+   LADO ESQUERDO
+   ========================================================= */
 
 .lado-esquerdo {
     width: 50%;
-    max-width: 650px;
+    max-width: 540px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+
+/* MÓDULO 4 */
 
 .modulo {
     width: fit-content;
-    padding: 6px 16px;
-    margin-bottom: 25px;
-    background: #E8F1F8;
-    color: #5C88BF;
-    border-radius: 99px;
+
+    padding: 7px 17px;
+
+    margin-bottom: 22px;
+
+    background: #e8f1f8;
+
+    color: #5c88bf;
+
+    border-radius: 50px;
+
+    font-family: Arial, sans-serif;
+
     font-size: 12px;
+
     font-weight: 700;
+
     text-transform: uppercase;
+
     letter-spacing: 2px;
 }
 
-h1 {
-    color: #1C2F44;
-    font-size: 48px;
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.lado-esquerdo h1 {
+    margin: 0 0 18px 0;
+
+    color: #1c2f44;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 46px;
+
     font-weight: 800;
-    line-height: 1.08;
-    margin-bottom: 22px;
+
+    line-height: 1.05;
 }
 
+
+/* =========================================================
+   DESCRIÇÃO
+   ========================================================= */
+
 .descricao {
-    max-width: 520px;
-    color: #5A6F84;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.8;
-    margin-bottom: 30px;
+    max-width: 460px;
+
+    margin: 0 0 28px 0;
+
+    color: #5a6f84;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
 }
+
+
+/* =========================================================
+   OPÇÕES
+   ========================================================= */
 
 .opcoes {
     width: 100%;
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+
+    gap: 14px;
 }
 
 
-/* ================================= */
-/* OPÇÕES DE EMOÇÃO */
-/* ================================= */
-
-.opcao {
-    width: 100%;
-    min-height: 115px;
-    padding: 18px;
-    background: #ffffff;
-    border: 2px solid #D6E7F5;
-    border-radius: 15px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 9px;
-
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-
-/* Esconde os radio buttons */
+/* RADIO */
 
 .opcoes input[type="radio"] {
     display: none;
 }
 
 
-/* Efeito ao passar o mouse */
+/* =========================================================
+   CARDS
+   ========================================================= */
 
-.opcao:hover {
-    border-color: #5C88BF;
-    transform: translateY(-3px);
-    box-shadow:
-        0 8px 20px rgba(92, 136, 191, 0.10);
-}
+.opcao {
+    width: 100%;
 
+    min-height: 92px;
 
-/* ================================= */
-/* BOLINHAS */
-/* ================================= */
+    padding: 16px 20px;
 
-.bolinha {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
+    background: #ffffff;
 
+    border: 1px solid #d6e7f5;
 
-/* Cor de cada bolinha */
+    border-radius: 11px;
 
-.calmo .bolinha {
-    background: #6BBF8A;
-}
-
-.agitado .bolinha {
-    background: #E8C547;
-}
-
-.cansado .bolinha {
-    background: #6BAEC4;
-}
-
-.sobrecarga .bolinha {
-    background: #E07070;
-}
-
-
-/* ================================= */
-/* EMOÇÃO SELECIONADA */
-/* ================================= */
-
-
-/* CALMO - VERDE */
-
-#calmo:checked + .calmo {
-    background: #6BBF8A;
-    border-color: #6BBF8A;
-    box-shadow:
-        0 8px 20px rgba(107, 191, 138, 0.25);
-
-    transform: translateY(-3px);
-}
-
-
-/* AGITADO - AMARELO */
-
-#agitado:checked + .agitado {
-    background: #E8C547;
-    border-color: #E8C547;
-    box-shadow:
-        0 8px 20px rgba(232, 197, 71, 0.25);
-
-    transform: translateY(-3px);
-}
-
-
-/* CANSADO - AZUL */
-
-#cansado:checked + .cansado {
-    background: #6BAEC4;
-    border-color: #6BAEC4;
-    box-shadow:
-        0 8px 20px rgba(107, 174, 196, 0.25);
-
-    transform: translateY(-3px);
-}
-
-
-/* SOBRECARGA - VERMELHO */
-
-#sobrecarga:checked + .sobrecarga {
-    background: #E07070;
-    border-color: #E07070;
-    box-shadow:
-        0 8px 20px rgba(224, 112, 112, 0.25);
-
-    transform: translateY(-3px);
-}
-
-
-/* ================================= */
-/* TEXTO */
-/* ================================= */
-
-.texto-opcao {
     display: flex;
+
     flex-direction: column;
-    justify-content: space-around;
-}
 
-.texto-opcao h1 {
-    color: #1C2F44;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1.3;
-}
+    align-items: flex-start;
 
-.texto-opcao p {
-    color: #5A6F84;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 1.4;
-}
-
-
-/* Texto branco quando selecionado */
-
-#calmo:checked + .calmo .texto-opcao h1,
-#calmo:checked + .calmo .texto-opcao p,
-
-#agitado:checked + .agitado .texto-opcao h1,
-#agitado:checked + .agitado .texto-opcao p,
-
-#cansado:checked + .cansado .texto-opcao h1,
-#cansado:checked + .cansado .texto-opcao p,
-
-#sobrecarga:checked + .sobrecarga .texto-opcao h1,
-#sobrecarga:checked + .sobrecarga .texto-opcao p {
-    color: #ffffff;
-}
-
-
-/* ================================= */
-/* BOTÃO */
-/* ================================= */
-
-.area-botao {
-    margin-top: 25px;
-}
-
-.botao {
-    height: 60px;
-    padding: 16px 30px;
-    border: none;
-    border-radius: 15px;
-    background: #5C88BF;
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 600;
-
-    display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
+
+    gap: 6px;
 
     cursor: pointer;
 
-    box-shadow:
-        0 8px 25px rgba(92, 136, 191, 0.25);
+    box-sizing: border-box;
 
     transition: 0.2s ease;
 }
 
-.botao:hover {
-    background: #4D79AE;
+
+/* HOVER */
+
+.opcao:hover {
+    border-color: #5c88bf;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(92, 136, 191, 0.12);
+}
+
+
+/* =========================================================
+   BOLINHAS
+   ========================================================= */
+
+.bolinha {
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+
+/* CORES */
+
+.calmo .bolinha {
+    background: #6bbf8a;
+}
+
+.agitado .bolinha {
+    background: #e8c547;
+}
+
+.cansado .bolinha {
+    background: #6baec4;
+}
+
+.sobrecarga .bolinha {
+    background: #e07070;
+}
+
+
+/* =========================================================
+   TEXTO DOS CARDS
+   ========================================================= */
+
+.texto-opcao {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.texto-opcao strong {
+    margin: 0;
+
+    color: #1c2f44;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.texto-opcao span {
+    margin: 0;
+
+    color: #5a6f84;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   CARDS SELECIONADOS
+   ========================================================= */
+
+#calmo:checked + .calmo {
+    background: #6bbf8a;
+
+    border-color: #6bbf8a;
+
+    box-shadow:
+        0 8px 20px rgba(107, 191, 138, 0.25);
+
     transform: translateY(-2px);
 }
 
-.icone {
-    font-size: 19px;
+
+#agitado:checked + .agitado {
+    background: #e8c547;
+
+    border-color: #e8c547;
+
+    box-shadow:
+        0 8px 20px rgba(232, 197, 71, 0.25);
+
+    transform: translateY(-2px);
 }
 
 
-/* ================================= */
-/* LADO DIREITO */
-/* ================================= */
+#cansado:checked + .cansado {
+    background: #6baec4;
+
+    border-color: #6baec4;
+
+    box-shadow:
+        0 8px 20px rgba(107, 174, 196, 0.25);
+
+    transform: translateY(-2px);
+}
+
+
+#sobrecarga:checked + .sobrecarga {
+    background: #e07070;
+
+    border-color: #e07070;
+
+    box-shadow:
+        0 8px 20px rgba(224, 112, 112, 0.25);
+
+    transform: translateY(-2px);
+}
+
+
+/* TEXTO BRANCO */
+
+#calmo:checked + .calmo .texto-opcao strong,
+#calmo:checked + .calmo .texto-opcao span,
+
+#agitado:checked + .agitado .texto-opcao strong,
+#agitado:checked + .agitado .texto-opcao span,
+
+#cansado:checked + .cansado .texto-opcao strong,
+#cansado:checked + .cansado .texto-opcao span,
+
+#sobrecarga:checked + .sobrecarga .texto-opcao strong,
+#sobrecarga:checked + .sobrecarga .texto-opcao span {
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   BOTÃO
+   ========================================================= */
+
+.area-botao {
+    margin-top: 22px;
+}
+
+
+.botao {
+    height: 56px;
+
+    padding: 12px 28px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #5c88bf;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(92, 136, 191, 0.25);
+
+    transition: 0.2s ease;
+}
+
+
+.botao:hover {
+    background: #4d79ae;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LADO DIREITO
+   ========================================================= */
 
 .lado-direito {
     width: 50%;
-    min-height: 600px;
+
+    min-height: 400px;
+
     position: relative;
 
     display: flex;
+
     align-items: center;
+
+    justify-content: center;
 }
 
+
+/* =========================================================
+   IMAGEM
+   ========================================================= */
+
 .imagem-container {
-    width: 100%;
-    height: 550px;
+    width: 480px;
+
+    height: 310px;
+
     position: relative;
 
     overflow: hidden;
 
-    border-radius: 28px;
-    background: #E8F1F8;
+    border-radius: 17px;
+
+    background: #e8f1f8;
 
     box-shadow:
-        0 24px 64px rgba(92, 136, 191, 0.12);
+        0 20px 45px rgba(92, 136, 191, 0.12);
 }
+
 
 .imagem-container img {
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
+
     display: block;
 }
+
+
+/* =========================================================
+   GRADIENTE
+   ========================================================= */
 
 .gradiente {
     position: absolute;
 
     width: 100%;
+
     height: 100%;
 
     left: 0;
+
     top: 0;
 
     background: linear-gradient(
@@ -325,75 +445,104 @@ h1 {
 }
 
 
-/* ================================= */
-/* CARD DA SEMANA */
-/* ================================= */
+/* =========================================================
+   CARD "ESTA SEMANA"
+   ========================================================= */
 
 .card-semana {
-    width: calc(100% - 50px);
+    width: 400px;
 
     position: absolute;
 
-    left: 25px;
-    bottom: 30px;
+    left: 50%;
 
-    padding: 25px;
+    bottom: 40px;
+
+    transform: translateX(-50%);
+
+    padding: 22px;
 
     background: #ffffff;
 
-    border-radius: 20px;
+    border-radius: 15px;
 
-    border: 1px solid #D6E7F5;
+    border: 1px solid #d6e7f5;
 
     box-shadow:
-        0 16px 40px rgba(92, 136, 191, 0.12);
+        0 14px 35px rgba(92, 136, 191, 0.12);
+
+    box-sizing: border-box;
 }
+
+
+/* CABEÇALHO */
 
 .cabecalho-card {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
+
 .cabecalho-card strong {
-    color: #1C2F44;
+    color: #1c2f44;
+
+    font-family: Arial, sans-serif;
+
     font-size: 16px;
+
     font-weight: 700;
 }
 
+
+/* MÊS */
+
 .mes {
-    padding: 5px 12px;
+    padding: 6px 12px;
 
-    background: #F2F7FB;
+    background: #f2f7fb;
 
-    border: 1px solid #D6E7F5;
+    border: 1px solid #d6e7f5;
 
-    border-radius: 99px;
+    border-radius: 50px;
 
-    color: #5A6F84;
+    color: #5a6f84;
 
-    font-size: 12px;
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
 }
+
+
+/* DIAS */
 
 .dias {
     width: 100%;
 
     display: flex;
+
     justify-content: space-between;
 
-    margin-top: 25px;
+    margin-top: 22px;
 }
 
+
 .dia {
-    color: #5A6F84;
-    font-size: 12px;
+    color: #5a6f84;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
     text-align: center;
 }
 
 
-/* ================================= */
-/* CELULAR */
-/* ================================= */
+/* =========================================================
+   CELULAR
+   ========================================================= */
 
 @media (max-width: 750px) {
 
@@ -401,32 +550,47 @@ h1 {
         min-height: auto;
 
         flex-direction: column;
+
         align-items: stretch;
 
-        padding: 30px 20px;
+        padding: 40px 20px;
 
-        gap: 50px;
+        gap: 40px;
     }
+
 
     .lado-esquerdo {
         width: 100%;
+
         max-width: none;
     }
+
 
     .lado-direito {
         width: 100%;
-        min-height: 450px;
+
+        min-height: 350px;
     }
+
 
     .imagem-container {
-        height: 450px;
+        width: 100%;
+
+        max-width: 380px;
+
+        height: 240px;
     }
 
-    h1 {
-        font-size: 38px;
+
+    .card-semana {
+        width: calc(100% - 30px);
+
+        max-width: 315px;
     }
 
-    .descricao {
-        max-width: none;
+
+    .lado-esquerdo h1 {
+        font-size: 32px;
     }
+
 }
