@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>HomePage</title>
+</head>
+
+<body>
+    <main>
+
+        <!--Início da Header-->
+        <header id="header_menu">
+            <h1 id="name">SinguLar</h1>
+            <div id="link">
+                <a href="#modulo-rotina-visual" class="head">Rotina</a>
+                <a href="#" class="head">Singular AI</a>
+                <a href="#" class="head">Acompanhamento Online</a>
+                <a href="#" class="head">Notificações</a>
+                <a href="#" class="head">Para Profissionais</a>
+            </div>
+
+            <div id="botao">
+                <button class="cores" id="azul"></button>
+                <button class="cores" id="verde"></button>
+                <button class="cores" id="roxo"></button>
+                <button class="cores" id="marrom"></button>
+                <button class="cores" id="preto"></button>
+            </div>
+
+            <div id="area-login">
+                <button id="login">
+                    Começar Grátis
+                </button>
+            </div>
+
+            <div id="area-usuario" style="display: none;">
+                <span id="saudacao-usuario"></span>
+                <button id="btn-sair">Sair</button>
+            </div>
+        </header>
+        <!--Fim da Header-->
+
+        <!--Início da body geral-->
+        <section id="hero">
+            <div id="container"> ● PARA PESSOAS TEA, FAMILIARES E PROFISSIONAIS DE SAÚDE</div>
+
+            <h2 id="frase_rotina">Sua rotina, <span class="destaque">no seu ritmo</span>.</h2>
+
+            <p id="planejamento">Planejamento visual, IA que decompõe tarefas e acompanhamento online, tudo pensado para
+                o seu sistema nervoso.</p>
+
+            <div id="menino"></div>
+
+            <div id="card-rotina">
+                <div class="card-rotina-header">
+                    <span class="card-rotina-data" id="hero-rotina-data">—</span>
+                    <span class="card-rotina-progresso"><span id="hero-concluidas">0</span>/<span
+                            id="hero-total">0</span></span>
+                </div>
+                <div class="card-rotina-barra">
+                    <div class="card-rotina-barra-preenchida" id="hero-barra-preenchida"></div>
+                </div>
+                <ul class="card-rotina-tarefas" id="hero-lista-tarefas"></ul>
+            </div>
+
+            <!-- Botões -->
+            <div id="botoes-hero">
+                <button id="btn-comecar">Começar gratuitamente</button>
+                <button id="btn-ver-como-funciona">▶ Ver como funciona</button>
+            </div>
+
+            <!-- Estatísticas -->
+            <div id="estatisticas">
+                <div class="stat">
+                    <span class="stat-numero">12000+</span>
+                    <span class="stat-label">usuários</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-numero">94%</span>
+                    <span class="stat-label">menos ansiedade</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-numero">380+</span>
+                    <span class="stat-label">terapeutas</span>
+                </div>
+            </div>
+
+            <!-- Personalizar tema -->
+            <div id="personalizar-tema">
+                <span id="personalizar-tema-titulo">PERSONALIZAR TEMA</span>
+                <div class="temas-lista">
+                    <div class="tema-item">
+                        <button class="tema-cor selecionado" id="tema-azul"></button>
+                        <span class="tema-nome">Azul Calma</span>
+                    </div>
+                    <div class="tema-item">
+                        <button class="tema-cor" id="tema-verde"></button>
+                        <span class="tema-nome">Verde Menta</span>
+                    </div>
+                    <div class="tema-item">
+                        <button class="tema-cor" id="tema-roxo"></button>
+                        <span class="tema-nome">Lilás Conforto</span>
+                    </div>
+                    <div class="tema-item">
+                        <button class="tema-cor" id="tema-marrom"></button>
+                        <span class="tema-nome">Areia Quente</span>
+                    </div>
+                    <div class="tema-item">
+                        <button class="tema-cor" id="tema-preto"></button>
+                        <span class="tema-nome">Alto Contraste</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim da body geral-->
+
+        <!--Início da segunda page-->
+
+        <div id="faixa-destaques">
+            <div class="destaques-lista">
+                <span class="destaque-item">✦ Acompanhamento Online</span>
+                <span class="destaque-item">✦ Pausas Sensoriais</span>
+                <span class="destaque-item">✦ Diário de Humor</span>
+                <span class="destaque-item">✦ Alertas Adaptativos</span>
+                <span class="destaque-item">✦ Micro-etapas</span>
+                <span class="destaque-item">✦ Modo Proteção</span>
+                <span class="destaque-item">✦ Rotina Visual</span>
+                <span class="destaque-item">✦ Singular AI</span>
+            </div>
+        </div>
+
+        <section id="como-funciona">
+            <span class="secao-label">✦ COMO O SINGULAR FUNCIONA</span>
+
+            <div class="abas-usuario">
+                <button class="aba aba-ativa" id="aba-profissional">Para profissionais de saúde</button>
+                <button class="aba" id="aba-tea">Para usuários com TEA</button>
+            </div>
+
+            <!-- Conteúdo: profissionais de saúde -->
+            <div class="cards-funcionamento conteudo-aba conteudo-aba-profissional">
+                <div class="card-funcionamento">
+                    <span class="card-numero">1</span>
+                    <h3>Cadastro com CRP ou CRM</h3>
+                    <p>Crie sua conta profissional com seu registro de conselho. O acesso ao portal clínico é restrito e
+                        verificado.</p>
+                </div>
+                <div class="card-funcionamento">
+                    <span class="card-numero">2</span>
+                    <h3>Vincule seus pacientes</h3>
+                    <p>Seus pacientes aceitam o convite e você passa a ter acesso aos registros dele — rotina, humor e
+                        diário.</p>
+                </div>
+                <div class="card-funcionamento">
+                    <span class="card-numero">3</span>
+                    <h3>Registre e observe</h3>
+                    <p>Adicione relatórios de sessão e observações clínicas diretamente no perfil de cada paciente, com
+                        histórico completo.</p>
+                </div>
+                <div class="card-funcionamento">
+                    <span class="card-numero">4</span>
+                    <h3>IA resume o que importa</h3>
+                    <p>Antes de cada sessão, gere um resumo inteligente: pontos de atenção, progressos e sugestões, sem
+                        precisar ler tudo.</p>
+                </div>
+            </div>
+
+            <!-- Conteúdo: usuários com TEA (começa escondido) -->
+            <div class="cards-funcionamento conteudo-aba conteudo-aba-tea">
+                <div class="card-funcionamento">
+                    <span class="card-numero">1</span>
+                    <h3>Crie sua conta</h3>
+                    <p>Informe se é pessoa com TEA ou familiar. O Singular ajusta a experiência ao seu perfil sensorial.
+                    </p>
+                </div>
+                <div class="card-funcionamento">
+                    <span class="card-numero">2</span>
+                    <h3>Monte sua rotina</h3>
+                    <p>Adicione tarefas com horário e duração. Travou? A IA decompõe qualquer tarefa em passos
+                        minúsculos.</p>
+                </div>
+                <div class="card-funcionamento">
+                    <span class="card-numero">3</span>
+                    <h3>Siga no seu ritmo</h3>
+                    <p>Marque o que concluiu, use as pausas sensoriais, registre seu humor no diário. Sem pressa, sem
+                        pressão.</p>
+                </div>
+                <div class="card-funcionamento">
+                    <span class="card-numero">4</span>
+                    <h3>Vincule um profissional</h3>
+                    <p>Se quiser, convide seu terapeuta. Ele acessa seus registros com a sua autorização e te acompanha
+                        de perto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="modulo-rotina-visual">
+            <span class="modulo-label">MÓDULO 1</span>
+
+            <h2 class="modulo-titulo">Rotina visual,<br>passo a passo.</h2>
+
+            <p class="modulo-descricao">Blocos de tempo com ícones, micro-etapas automáticas e pausas sensoriais
+                programadas. Seu dia, organizado do jeito que funciona para você.</p>
+
+            <ul class="modulo-checklist">
+                <li class="check-item">
+                    <span class="check-icone">✓</span>
+                    <div>
+                        <span class="check-titulo">Micro-etapas</span>
+                        <span class="check-descricao">passos concretos</span>
+                    </div>
+                </li>
+                <li class="check-item">
+                    <span class="check-icone">✓</span>
+                    <div>
+                        <span class="check-titulo">Timer visual</span>
+                        <span class="check-descricao">sem números abstratos</span>
+                    </div>
+                </li>
+                <li class="check-item">
+                    <span class="check-icone">✓</span>
+                    <div>
+                        <span class="check-titulo">Pausas automáticas</span>
+                        <span class="check-descricao">entre atividades</span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="cards-modulo">
+
+                <!-- CARD: rotina com dias da semana -->
+                <div class="card-sua-rotina">
+                    <div class="dias-semana-tabs" id="dias-semana-tabs"></div>
+
+                    <div class="rotina-header">
+                        <div>
+                            <span class="rotina-data" id="rotina-data-texto">—</span>
+                            <h3 class="rotina-titulo">Sua rotina</h3>
+                        </div>
+                        <div class="rotina-progresso">
+                            <span class="rotina-progresso-numero" id="rotina-concluidas">0</span><span
+                                class="rotina-progresso-total">/<span id="rotina-total">0</span></span>
+                            <span class="rotina-progresso-label">concluídos</span>
+                        </div>
+                    </div>
+
+                    <div class="rotina-barra">
+                        <div class="rotina-barra-preenchida" id="rotina-barra-preenchida" style="width:0%"></div>
+                    </div>
+
+                    <ul class="rotina-lista" id="lista-rotina"></ul>
+
+                    <button type="button" id="abrir-form-rotina" class="btn-add-tarefa">+ Adicionar tarefa</button>
+
+                    <div class="add-tarefa-form" id="form-rotina">
+                        <div class="tipo-tarefa-opcoes">
+                            <button type="button" class="tipo-opcao selecionado" id="tipo-unica" data-tipo="unica">Só
+                                hoje</button>
+                            <button type="button" class="tipo-opcao" id="tipo-fixa" data-tipo="fixa">Fixa
+                                (repete)</button>
+                        </div>
+
+                        <div class="dias-fixos-opcoes" id="dias-fixos-opcoes" style="display: none;">
+                            <button type="button" class="dia-fixo-opcao" data-dia="dom">D</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="seg">S</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="ter">T</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="qua">Q</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="qui">Q</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="sex">S</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="sab">S</button>
+                        </div>
+
+                        <input type="time" id="novo-horario-rotina" class="input-nova-tarefa">
+                        <input type="text" id="novo-nome-rotina" class="input-nova-tarefa" placeholder="Nome da tarefa">
+                        <input type="number" id="nova-duracao-rotina" class="input-nova-tarefa"
+                            placeholder="Duração (min)" min="1">
+                        <button type="button" id="salvar-tarefa-rotina" class="btn-salvar-tarefa">Adicionar</button>
+                    </div>
+
+                    <button type="button" id="concluir-dia" class="btn-concluir-dia">✓ Concluir dia</button>
+                </div>
+
+                <!-- CARD DIREITO: Bloco de notas -->
+                <div class="card-anotacoes">
+                    <div class="anotacoes-topo">
+                        <div class="anotacoes-bolinhas">
+                            <span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <span class="anotacoes-label">ANOTAÇÕES · SÓ VOCÊ VÊ</span>
+                    </div>
+                    <div class="anotacoes-corpo">
+                        <input type="text" class="anotacoes-titulo" placeholder="Título da nota...">
+                        <textarea class="anotacoes-texto" placeholder="Escreva sua anotação aqui..."></textarea>
+                        <button class="anotacoes-salvar">✓ Salvar nota</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section id="cta-final">
+            <h2 id="cta-final-titulo">Você merece uma rotina<br>que funciona para você.</h2>
+            <p id="cta-final-texto">Comece hoje, de graça. Sem formulários longos, sem sobrecarga.</p>
+
+            <div id="cta-final-botoes">
+                <button id="btn-cta-criar-conta">Criar conta gratuita</button>
+                <button id="btn-cta-planos">Conhecer os planos</button>
+            </div>
+
+            <span id="cta-final-nota">Grátis por 1 mês no plano básico · Sem cartão de crédito</span>
+        </section>
+
+    </main>
+
+    <!--Início do Footer-->
+    <footer id="footer-principal">
+        <div id="footer-topo">
+
+            <div id="footer-marca">
+                <div id="footer-logo"><span id="footer-logo-icone">◆</span> Singular</div>
+                <p id="footer-descricao">Rotina, acompanhamento e IA para pessoas com TEA, familiares e profissionais de
+                    saúde.</p>
+                <div id="footer-badges">
+                    <span class="footer-badge">LGPD</span>
+                    <span class="footer-badge">TEA Friendly</span>
+                    <span class="footer-badge">AA Acessível</span>
+                </div>
+            </div>
+
+            <div id="footer-colunas">
+                <div class="footer-coluna">
+                    <span class="footer-coluna-titulo">PLATAFORMA</span>
+                    <a href="#modulo-rotina-visual" class="footer-link">Rotina Visual</a>
+                    <a href="#" class="footer-link">Singular AI</a>
+                    <a href="#" class="footer-link">Acompanhamento</a>
+                    <a href="#" class="footer-link">Notificações</a>
+                </div>
+
+                <div class="footer-coluna">
+                    <span class="footer-coluna-titulo">PROFISSIONAIS</span>
+                    <a href="#" class="footer-link">Portal clínico</a>
+                    <a href="#" class="footer-link">Seja parceiro</a>
+                    <a href="#" class="footer-link">Privacidade</a>
+                </div>
+
+                <div class="footer-coluna">
+                    <span class="footer-coluna-titulo">AJUDA</span>
+                    <a href="#" class="footer-link">Guia de uso</a>
+                    <a href="#" class="footer-link">Apoio rápido</a>
+                    <a href="#" class="footer-link">Contato</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footer-divisor"></div>
+
+        <div id="footer-base">
+            <span id="footer-copyright">© 2026 Singular · Feito com cuidado para pessoas com TEA e quem as
+                acompanha.</span>
+        </div>
+    </footer>
+    <!--Fim do Footer-->
+
+    <!--Início do modal de cadastro-->
+    <div id="modal-overlay">
+        <div id="modal-criar-conta">
+
+            <button id="modal-fechar">✕</button>
+
+            <div class="modal-header">
+                <div>
+                    <h2 class="modal-titulo">Criar conta gratuita</h2>
+                    <span class="modal-passo" id="texto-do-passo">Passo 1 de 2</span>
+                </div>
+            </div>
+
+            <div class="modal-barra-progresso">
+                <div class="modal-barra-preenchida" id="barra-do-passo"></div>
+            </div>
+
+            <!-- PASSO 1 -->
+            <div class="modal-conteudo modal-conteudo-1">
+                <div class="modal-campo">
+                    <label for="input-nome">Seu nome</label>
+                    <input type="text" id="input-nome" placeholder="Como você quer ser chamado?">
+                </div>
+
+                <div class="modal-campo">
+                    <label>Eu sou:</label>
+                    <div class="modal-perfil-opcoes">
+                        <button type="button" class="perfil-opcao" id="perfil-tea" data-perfil="tea">Pessoa com
+                            TEA</button>
+                        <button type="button" class="perfil-opcao" id="perfil-familiar" data-perfil="familiar">Familiar
+                            / Responsável</button>
+                    </div>
+                </div>
+
+                <div class="modal-campo">
+                    <label for="input-email">E-mail</label>
+                    <input type="email" id="input-email" placeholder="seu@email.com">
+                </div>
+
+                <div class="modal-campo">
+                    <label for="input-cpf">CPF</label>
+                    <input type="text" id="input-cpf" placeholder="000.000.000-00" maxlength="14" inputmode="numeric">
+                </div>
+
+                <button id="modal-continuar" class="modal-btn-continuar">Continuar →</button>
+            </div>
+
+            <!-- PASSO 2 -->
+            <div class="modal-conteudo modal-conteudo-2">
+                <div class="modal-campo">
+                    <label for="input-email-2">E-mail</label>
+                    <input type="email" id="input-email-2" readonly>
+                </div>
+
+                <div class="modal-campo">
+                    <label for="input-senha">Crie uma senha</label>
+                    <input type="password" id="input-senha" placeholder="Senha" maxlength="20" minlength="8"
+                        pattern="(?=.*[A-Z])(?=.*[!@#$%^&*(),.?&quot;:{}|<>]).{8,}"
+                        title="A senha precisa ter no mínimo 8 caracteres, 1 letra maiúscula e 1 caractere especial">
+                </div>
+
+                <div class="modal-campo">
+                    <label for="input-confirmar-senha">Confirme sua senha</label>
+                    <input type="password" id="input-confirmar-senha" placeholder="Senha" maxlength="20">
+                </div>
+
+                <button id="modal-continuar-2" class="modal-btn-continuar">Continuar →</button>
+            </div>
+
+            <p class="modal-termos">
+                Ao criar conta, você concorda com nossos <a href="#">Termos</a> e <a href="#">Política de
+                    Privacidade</a>.
+            </p>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
