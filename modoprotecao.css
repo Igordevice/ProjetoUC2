@@ -31,30 +31,11 @@
 
 .icone {
     width: 20px;
-    height: 20px;
+    height: 10px;
     position: relative;
     overflow: hidden;
 }
 
-.icone-forma {
-    width: 14px;
-    height: 17.5px;
-    left: 3px;
-    top: 2px;
-    position: absolute;
-    opacity: 0.8;
-    background: #E07070;
-}
-
-.icone-detalhe {
-    width: 6px;
-    height: 4px;
-    left: 7px;
-    top: 8px;
-    position: absolute;
-    outline: 1.5px white solid;
-    outline-offset: -0.75px;
-}
 
 /* Título */
 

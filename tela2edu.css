@@ -1,49 +1,67 @@
-* {
+
+.tela2,
+.tela2 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
+
+/* =========================================
+   TELA 2
+========================================= */
+
+.tela2 {
+    width: 100%;
+    min-height: 100vh;
+
     font-family: "Lexend", Arial, sans-serif;
+
     background: #E4F3EE;
     color: #1C2F44;
 }
 
 
-/* =========================
+/* =========================================
    PÁGINA
-========================= */
+========================================= */
 
-.pagina {
+.tela2 .pagina {
     width: 100%;
     min-height: 100vh;
+
     padding: 96px 32px;
+
     background: #E4F3EE;
 }
 
-.conteudo {
+
+.tela2 .conteudo {
     width: 1280px;
     max-width: 100%;
+
     margin: 0 auto;
 }
 
 
-/* =========================
+/* =========================================
    CABEÇALHO
-========================= */
+========================================= */
 
-.cabecalho {
+.tela2 .cabecalho {
     width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-/* Módulo */
+/* =========================================
+   MÓDULO
+========================================= */
 
-.modulo {
+.tela2 .modulo {
     width: 107px;
     height: 27px;
 
@@ -54,8 +72,8 @@ body {
     margin-bottom: 40px;
 
     background: white;
-    border-radius: 99px;
 
+    border-radius: 99px;
     border: 1px solid #D6E7F5;
 
     color: #5C88BF;
@@ -68,9 +86,11 @@ body {
 }
 
 
-/* Título */
+/* =========================================
+   TÍTULO
+========================================= */
 
-h1 {
+.tela2 h1 {
     text-align: center;
 
     color: #1C2F44;
@@ -82,9 +102,11 @@ h1 {
 }
 
 
-/* Subtítulo */
+/* =========================================
+   SUBTÍTULO
+========================================= */
 
-.subtitulo {
+.tela2 .subtitulo {
     width: 480px;
     max-width: 100%;
 
@@ -102,11 +124,11 @@ h1 {
 }
 
 
-/* =========================
+/* =========================================
    AVISO
-========================= */
+========================================= */
 
-.aviso {
+.tela2 .aviso {
     width: 560px;
     max-width: 100%;
 
@@ -120,19 +142,18 @@ h1 {
     background: white;
 
     border: 1px solid #D6E7F5;
-
     border-radius: 16px;
 
     box-shadow: 0 4px 20px rgba(92, 136, 191, 0.05);
 }
 
 
-.icone-aviso {
+.tela2 .icone-aviso {
     padding-top: 1px;
 }
 
 
-.icone-aviso .icone {
+.tela2 .icone-aviso .icone {
     width: 32px;
     height: 32px;
 
@@ -142,26 +163,25 @@ h1 {
 }
 
 
-.texto-aviso {
+.tela2 .texto-aviso {
     color: #5A6F84;
 
     font-size: 14px;
-
     line-height: 24.5px;
 }
 
 
-.texto-aviso strong {
+.tela2 .texto-aviso strong {
     color: #1C2F44;
     font-weight: 700;
 }
 
 
-/* =========================
+/* =========================================
    CARDS
-========================= */
+========================================= */
 
-.cards {
+.tela2 .cards {
     width: 100%;
 
     display: grid;
@@ -174,7 +194,7 @@ h1 {
 }
 
 
-.card {
+.tela2 .card {
     min-height: 491px;
 
     padding: 28px;
@@ -182,18 +202,17 @@ h1 {
     background: white;
 
     border: 1px solid #D6E7F5;
-
     border-radius: 20px;
 
     box-shadow: 0 2px 20px rgba(92, 136, 191, 0.05);
 }
 
 
-/* =========================
+/* =========================================
    ÍCONES
-========================= */
+========================================= */
 
-.icone-card {
+.tela2 .icone-card {
     width: 44px;
     height: 44px;
 
@@ -207,9 +226,9 @@ h1 {
 }
 
 
-/* Ícone som */
+/* Ícone de som */
 
-.icone-som {
+.tela2 .icone-som {
     width: 16px;
     height: 16px;
 
@@ -221,7 +240,7 @@ h1 {
 
 /* Ícone relógio */
 
-.icone-relogio {
+.tela2 .icone-relogio {
     width: 16px;
     height: 16px;
 
@@ -233,7 +252,7 @@ h1 {
 }
 
 
-.icone-relogio::after {
+.tela2 .icone-relogio::after {
     content: "";
 
     position: absolute;
@@ -250,7 +269,7 @@ h1 {
 
 /* Ícone proteção */
 
-.icone-protecao {
+.tela2 .icone-protecao {
     width: 16px;
     height: 19px;
 
@@ -267,11 +286,11 @@ h1 {
 }
 
 
-/* =========================
+/* =========================================
    TÍTULOS DOS CARDS
-========================= */
+========================================= */
 
-.card h2 {
+.tela2 .card h2 {
     margin-top: 20px;
 
     color: #1C2F44;
@@ -283,7 +302,7 @@ h1 {
 }
 
 
-.descricao {
+.tela2 .descricao {
     margin-top: 6px;
 
     color: #5A6F84;
@@ -294,11 +313,11 @@ h1 {
 }
 
 
-/* =========================
+/* =========================================
    OPÇÕES
-========================= */
+========================================= */
 
-.opcoes {
+.tela2 .opcoes {
     display: flex;
     flex-direction: column;
 
@@ -308,7 +327,7 @@ h1 {
 }
 
 
-.opcao {
+.tela2 .opcao {
     min-height: 48px;
 
     display: flex;
@@ -325,14 +344,14 @@ h1 {
 }
 
 
-.opcao.selecionada {
+.tela2 .opcao.selecionada {
     background: #E8F1F8;
 
     border: 2px solid #5C88BF;
 }
 
 
-.opcao strong {
+.tela2 .opcao strong {
     display: block;
 
     color: #1C2F44;
@@ -344,7 +363,7 @@ h1 {
 }
 
 
-.opcao span {
+.tela2 .opcao span {
     display: block;
 
     color: #5A6F84;
@@ -355,9 +374,11 @@ h1 {
 }
 
 
-/* Check */
+/* =========================================
+   CHECK
+========================================= */
 
-.check {
+.tela2 .check {
     width: 18px;
     height: 18px;
 
@@ -376,11 +397,11 @@ h1 {
 }
 
 
-/* =========================
+/* =========================================
    INFORMAÇÃO
-========================= */
+========================================= */
 
-.info {
+.tela2 .info {
     margin-top: 20px;
 
     padding: 14px 16px;
@@ -399,16 +420,16 @@ h1 {
 }
 
 
-.info strong {
+.tela2 .info strong {
     font-weight: 700;
 }
 
 
-/* =========================
+/* =========================================
    CONFIGURAÇÕES
-========================= */
+========================================= */
 
-.configuracao {
+.tela2 .configuracao {
     min-height: 52px;
 
     display: flex;
@@ -430,11 +451,11 @@ h1 {
 }
 
 
-/* =========================
+/* =========================================
    TOGGLE
-========================= */
+========================================= */
 
-.toggle {
+.tela2 .toggle {
     width: 46px;
     height: 26px;
 
@@ -446,7 +467,7 @@ h1 {
 }
 
 
-.toggle div {
+.tela2 .toggle div {
     width: 20px;
     height: 20px;
 
@@ -465,21 +486,21 @@ h1 {
 }
 
 
-.toggle.ativo {
+.tela2 .toggle.ativo {
     background: #5C88BF;
 }
 
 
-.toggle.ativo div {
+.tela2 .toggle.ativo div {
     left: 23px;
 }
 
 
-/* =========================
+/* =========================================
    MODO PROTEÇÃO
-========================= */
+========================================= */
 
-.modo-normal {
+.tela2 .modo-normal {
     width: 100%;
 
     display: flex;
@@ -497,7 +518,7 @@ h1 {
 }
 
 
-.icone-modo {
+.tela2 .icone-modo {
     color: #5C88BF;
 
     font-size: 14px;
@@ -506,7 +527,7 @@ h1 {
 }
 
 
-.modo-normal strong {
+.tela2 .modo-normal strong {
     color: #1C2F44;
 
     font-size: 16px;
@@ -516,7 +537,7 @@ h1 {
 }
 
 
-.modo-normal span {
+.tela2 .modo-normal span {
     margin-top: 4px;
 
     text-align: center;
@@ -529,11 +550,11 @@ h1 {
 }
 
 
-/* =========================
+/* =========================================
    BOTÃO
-========================= */
+========================================= */
 
-.botao {
+.tela2 .botao {
     width: 100%;
     height: 53px;
 
@@ -560,26 +581,26 @@ h1 {
 }
 
 
-.botao:hover {
+.tela2 .botao:hover {
     opacity: 0.9;
 }
 
 
-/* =========================
+/* =========================================
    RESPONSIVIDADE
-========================= */
+========================================= */
 
 @media (max-width: 1000px) {
 
-    .pagina {
+    .tela2 .pagina {
         padding: 60px 20px;
     }
 
-    .cards {
+    .tela2 .cards {
         grid-template-columns: 1fr;
     }
 
-    .card {
+    .tela2 .card {
         min-height: auto;
     }
 
@@ -588,20 +609,20 @@ h1 {
 
 @media (max-width: 600px) {
 
-    h1 {
+    .tela2 h1 {
         font-size: 32px;
         line-height: 1.3;
     }
 
-    .subtitulo {
+    .tela2 .subtitulo {
         width: 100%;
     }
 
-    .aviso {
+    .tela2 .aviso {
         width: 100%;
     }
 
-    .pagina {
+    .tela2 .pagina {
         padding: 40px 16px;
     }
 
