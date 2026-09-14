@@ -77,13 +77,15 @@ h1 {
   margin: 0 auto;
 }
 
-.content {
+.container {
+
   display: grid;
   grid-template-columns: 1.10fr 1.10fr;
   gap: 24px;
-  height: 500px;
+  align-items: stretch;
   position: relative;
   z-index: 1;
+
 }
 
 .video-card {
@@ -148,43 +150,26 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20em;
+  gap: 8px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   height: 2.6em;
-  overflow: hidden;
   cursor: pointer;
-  margin: 20px;
-  font-size: 17px;
+  margin: 0;
+  font-size: 15px;
   z-index: 1;
   color: var(--color);
+  background: #fff;
   border: 2px solid var(--color);
   border-radius: 6px;
   position: relative;
-}
-
-.call-btn::before {
-  position: absolute;
-  content: "";
-  background: var(--color);
-  
-  width: 500px;
-  height: 500px;
-  z-index: -1;
-  border-radius: 50%;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 .call-btn:hover {
-  color: white;
-}
-
-.call-btn:before {
-  top: 100%;
-  left: 100%;
-  transition: 0.3s all;
-}
-
-.call-btn:hover::before {
-  top: -30px;
-  left: -30px;
+  background: var(--color);
+  color: #fff;
 }
 
 .call-btn:focus-visible {
@@ -281,7 +266,7 @@ h1 {
   .page {
     margin: 24px;
   }
-  .content {
+  .container {
     grid-template-columns: 1fr;
     height: auto;
   }

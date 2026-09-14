@@ -18,7 +18,7 @@ ScrollReveal().reveal('.header', {
         distance: '30%'
     });
 
-ScrollReveal().reveal('.content', {
+ScrollReveal().reveal('.container', {
         origin: 'left',
         duration: 3000,
         distance: '30%'
