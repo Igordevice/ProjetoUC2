@@ -1317,12 +1317,13 @@ body {
 #footer-principal {
     background: #FFF;
     padding: 60px 80px 0;
+    margin-top: 120px;
 }
 
 #footer-topo {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    gap: 70px;
     flex-wrap: wrap;
     padding-bottom: 40px;
 }
