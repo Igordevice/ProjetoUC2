@@ -528,3 +528,10 @@ botaoSalvarNota.addEventListener('click', function () {
         botaoSalvarNota.disabled = false;
     }, 1200);
 });
+
+// ===== CTA FINAL =====
+document.getElementById('btn-cta-criar-conta').addEventListener('click', abrirModal);
+
+document.getElementById('btn-cta-planos').addEventListener('click', function () {
+    document.getElementById('como-funciona').scrollIntoView({ behavior: 'smooth' });
+});
