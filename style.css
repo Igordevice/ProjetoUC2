@@ -6,9 +6,7 @@
     --grad-3: #E4F3EE;
 }
 
-* {
-    margin: 0;
-}
+
 
 html {
     scroll-behavior: smooth;

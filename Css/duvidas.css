@@ -1,0 +1,239 @@
+#keyid{
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2%;
+    
+  
+}
+
+.lexend {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.larg1{
+    width: min(1000px, 90vw);
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(0.5px, 2vw, 35px);
+    margin-top: clamp(15px, -2vw, -10px);
+    
+    
+}
+
+#bold{
+   font-weight: bolder;
+   font-size:  50px;
+}
+
+#duv{
+
+    border: 1px, solid, #D6E7F5;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: #E8F1F8;
+    color: #5C88BF;
+}
+
+section{
+    position:relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    justify-content: space-around;
+    height: 1000px;
+    margin: auto;
+    
+    
+}
+
+section header{
+    position:relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#div_sec{
+    height: auto;
+    width: 95%;
+    justify-content: space-around;
+    position:relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1cm;
+    transition: 0.9s ease;
+}
+
+#div_sec:hover{
+
+    gap: calc(100px);
+    transition: 0.9s ease;
+}
+
+.content {
+    background-color: #F2F7FB;
+    width: 95%;
+    min-height: 90px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 2s;
+    max-height: 90px;
+}
+
+.content:hover {
+    background-color: #D6E7F5;
+    max-height: 200px;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: max-height 2s;
+    transition: all 2s;
+}
+
+
+
+ #r1, #r2, #r3,#r4, #r5, #r6 {
+    position: absolute;
+    font-size: clamp(0.5px, 1vw, 50px);
+    background-color: #D6E7F5;
+    margin-top: clamp(-1px, -2vw, -10px);
+    float: left;
+    width: min(1000px, 90vw);
+    transition: all 2s;
+    
+}
+
+
+
+
+
+
+
+
+/* Resposta */
+.resposta {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+
+    transition:
+        opacity 2s ease,
+        max-height 0.8s ease;
+}
+
+/* Quando passar o mouse na pergunta */
+#div_1:hover .resposta {
+    opacity: 1;
+    max-height: 400px;
+}
+
+/*FIM DIV 1====================================================================================================*/
+
+
+
+#div_2:hover .resposta {
+    opacity: 1;
+    max-height: 400px;
+}
+
+/*FIM DiV2=====================================================================================================================*/
+
+
+#div_3:hover .resposta {
+    opacity: 1;
+    max-height: 400px;
+}
+
+/*FIm DIV 3======================================================================================================================*/
+
+
+#div_4:hover .resposta {
+    opacity: 1;
+    max-height: 400px;
+}
+
+/*FIM DIV 4===========================================================================================================================*/
+
+
+#div_5:hover .resposta {
+    opacity: 1;
+    max-height: 400px;
+}
+
+/*FIM DIV 5============================================================================================================================*/
+
+
+#div_6:hover .resposta {
+    opacity: 1;
+    max-height: 400px;
+}
+
+/*FIM DIV 6=================================================================================*/
+
+@media (max-width:1300px){
+    .larg1{
+    width: min(1000px, 90vw);
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(0.5px, 3vw, 30px);
+    margin-top: clamp(25px, -4vw, -10px);
+    
+    
+}
+
+#r1, #r2, #r3,#r4, #r5, #r6 {
+    position: absolute;
+    font-size: clamp(20px, 1vw, 0.1px);
+    background-color: #D6E7F5;
+    margin-top: clamp(1px, -3vw, -5px);
+    float: left;
+    width: min(910px, 80vw);
+    transition: all 2s;
+    
+}
+
+.content {
+    background-color: #F2F7FB;
+    width: min(1000px, 80vw);
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 2s;
+    max-height: 600px;
+}
+
+.content:hover {
+    background-color: #D6E7F5;
+    max-height: 300px;
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: max-height 2s;
+    transition: all 2s;
+}
+
+#div_sec:hover{
+
+    gap: calc(50px);
+    transition: 0.9s ease;
+}
+
+}
