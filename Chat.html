@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="Css/Chat.css">
+    <style>
+      .back-btn:hover { background: rgba(255,255,255,0.08); }
+    </style>
+</head>
+<body>
+    <div class="window">
+  <div class="titlebar">
+    <div class="titlebar-left">
+      <a href="Index.html" class="back-btn" aria-label="Voltar" title="Voltar"
+        style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;color:inherit;text-decoration:none;font-size:18px;margin-right:4px;flex-shrink:0;">←</a>
+      <div class="bell">🔔</div>
+      <div>
+        <h1>Painel Profissional</h1>
+        <p>· 3 profissionais ativos</p>
+      </div>
+    </div>
+    <a href="Index.html" class="close">✕</a>
+  </div>
+ 
+  <div class="body">
+    <div class="sidebar">
+      <p class="sidebar-label">PROFISSIONAIS</p>
+ 
+      <div class="patient-item active">
+        <div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop')"></div>
+        <div class="patient-info">
+          <p class="name">Ana Luiza S.</p>
+          <p class="tag">Terapeuta</p>
+          <div class="row-with-pct">
+            <div class="progress"><span style="width:78%"></span></div>
+            <span class="pct">78%</span>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="patient-item">
+        <div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop')"></div>
+        <div class="patient-info">
+          <p class="name">Pedro H. M.</p>
+          <p class="tag">Psiquiatra</p>
+          <div class="row-with-pct">
+            <div class="progress"><span style="width:61%;background:var(--amber)"></span></div>
+            <span class="pct">61%</span>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="patient-item">
+        <div class="avatar" style="background-image:url('Img/BG.jpeg')"></div>
+        <div class="patient-info">
+          <p class="name">Beatriz C.</p>
+          <p class="tag">Terapeuta</p>
+          <div class="row-with-pct">
+            <div class="progress"><span style="width:85%"></span></div>
+            <span class="pct">85%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="main">
+      <div class="patient-header">
+        <div class="who">
+          <div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop')"></div>
+          <div>
+            <h2>Ana Luiza S.</h2>
+            <p class="sub">Terapeuta · 24 anos · desde Mar 2026</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;">
+          <span class="week-label">Esta semana</span>
+          <div class="week-dots">
+            <span style="background:var(--green)"></span>
+            <span style="background:var(--green)"></span>
+            <span style="background:var(--amber)"></span>
+            <span style="background:var(--green)"></span>
+            <span style="background:var(--blue)"></span>
+            <span style="background:var(--green)"></span>
+            <span style="background:var(--green)"></span>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="tabs">
+
+        <div class="tab active">💬 Chat</div>
+      </div>
+ 
+      <div class="chat-wrap">
+        <div class="chat-meta">
+          <div class="label">
+            <span class="icon-dot">💬</span>
+            Conversa com Ana Luiza S.
+          </div>
+          <div class="note">Visível apenas para você e o profissional</div>
+        </div>
+ 
+        <div class="messages">
+          <div class="day-divider">Ontem</div>
+ 
+
+ 
+          <div class="msg out">
+            <div class="bubble">Bom dia, Dra. Camila! Consegui fazer a técnica de respiração antes de sair de casa hoje 🙂</div>
+            <div class="meta">Você · 08:15</div>
+          </div>
+
+        <div class="msg in">
+            <div class="bubble">Que ótima notícia, Ana! Como você se sentiu depois de praticar?</div>
+            <div class="meta">Ana Luiza · 08:12</div>
+          </div>
+ 
+
+ 
+          <div class="msg out">
+            <div class="bubble">Mais calma. Ainda fiquei tensa no ônibus, mas não travei como semana passada.</div>
+            <div class="meta">Você · 08:20</div>
+          </div>
+        
+          <div class="flag-note">
+            ⚠️ Palavra-chave "travei" identificada — relacionada a episódios anteriores de sobrecarga sensorial.
+          </div>
+ 
+          <div class="day-divider">Hoje</div>
+ 
+ 
+          <div class="msg out">
+            <div class="bubble">Dra., posso reagendar a sessão de quinta para sexta de manhã?</div>
+            <div class="meta">Você · 19:10</div>
+          </div>
+
+          <div class="msg in">
+            <div class="bubble">Consigo sim! Vou ajustar aqui e te confirmo em instantes.</div>
+          <div class="meta">Ana Luiza · 19:04</div>
+        </div> 
+        </div>
+
+
+ 
+        <div class="composer">
+          <div class="composer-tools">
+            <div class="chip">📎 Anexar</div>
+            <div class="chip">🧩 Enviar exercício</div>
+            <div class="chip">📅 Reagendar</div>
+          </div>
+          <div class="input-row">
+            <input type="text" placeholder="Escreva uma mensagem para Ana Luiza...">
+            <button class="send-btn">➤</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+</body>
+</html>
