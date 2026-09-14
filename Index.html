@@ -15,7 +15,7 @@
         <header id="header_menu">
             <h1 id="name">SinguLar</h1>
             <div id="link">
-                <a href="#" class="head">Rotina</a>
+                <a href="#modulo-rotina-visual" class="head">Rotina</a>
                 <a href="#" class="head">Singular AI</a>
                 <a href="#" class="head">Acompanhamento Online</a>
                 <a href="#" class="head">Notificações</a>
@@ -30,10 +30,15 @@
                 <button class="cores" id="preto"></button>
             </div>
 
-            <div>
+            <div id="area-login">
                 <button id="login">
                     Começar Grátis
                 </button>
+            </div>
+
+            <div id="area-usuario" style="display: none;">
+                <span id="saudacao-usuario"></span>
+                <button id="btn-sair">Sair</button>
             </div>
         </header>
         <!--Fim da Header-->
@@ -51,29 +56,13 @@
 
             <div id="card-rotina">
                 <div class="card-rotina-header">
-                    <span class="card-rotina-data">Segunda, 31 Ago</span>
-                    <span class="card-rotina-progresso">2/8</span>
+                    <span class="card-rotina-data" id="hero-rotina-data">—</span>
+                    <span class="card-rotina-progresso"><span id="hero-concluidas">0</span>/<span id="hero-total">0</span></span>
                 </div>
                 <div class="card-rotina-barra">
-                    <div class="card-rotina-barra-preenchida"></div>
+                    <div class="card-rotina-barra-preenchida" id="hero-barra-preenchida"></div>
                 </div>
-                <ul class="card-rotina-tarefas">
-                    <li class="tarefa concluida">
-                        <input type="checkbox" checked>
-                        <span>Tomar banho</span>
-                        <span class="horario">07:30</span>
-                    </li>
-                    <li class="tarefa concluida">
-                        <input type="checkbox" checked>
-                        <span>Café da manhã</span>
-                        <span class="horario">08:00</span>
-                    </li>
-                    <li class="tarefa">
-                        <input type="checkbox">
-                        <span>Estudar matemática</span>
-                        <span class="horario">09:00</span>
-                    </li>
-                </ul>
+                <ul class="card-rotina-tarefas" id="hero-lista-tarefas"></ul>
             </div>
 
             <!-- Botões -->
@@ -146,9 +135,8 @@
             <span class="secao-label">✦ COMO O SINGULAR FUNCIONA</span>
 
             <div class="abas-usuario">
-                 <button class="aba aba-ativa" id="aba-profissional">Para profissionais de saúde</button>
+                <button class="aba aba-ativa" id="aba-profissional">Para profissionais de saúde</button>
                 <button class="aba" id="aba-tea">Para usuários com TEA</button>
-               
             </div>
 
             <!-- Conteúdo: profissionais de saúde -->
@@ -184,12 +172,14 @@
                 <div class="card-funcionamento">
                     <span class="card-numero">1</span>
                     <h3>Crie sua conta</h3>
-                    <p>Informe se é pessoa com TEA ou familiar. O Singular ajusta a experiência ao seu perfil sensorial.</p>
+                    <p>Informe se é pessoa com TEA ou familiar. O Singular ajusta a experiência ao seu perfil sensorial.
+                    </p>
                 </div>
                 <div class="card-funcionamento">
                     <span class="card-numero">2</span>
                     <h3>Monte sua rotina</h3>
-                    <p>Adicione tarefas com horário e duração. Travou? A IA decompõe qualquer tarefa em passos minúsculos.</p>
+                    <p>Adicione tarefas com horário e duração. Travou? A IA decompõe qualquer tarefa em passos
+                        minúsculos.</p>
                 </div>
                 <div class="card-funcionamento">
                     <span class="card-numero">3</span>
@@ -240,73 +230,52 @@
 
             <div class="cards-modulo">
 
-                <!-- CARD ESQUERDO: Sua rotina -->
+                <!-- CARD: rotina com dias da semana -->
                 <div class="card-sua-rotina">
+                    <div class="dias-semana-tabs" id="dias-semana-tabs"></div>
+
                     <div class="rotina-header">
                         <div>
-                            <span class="rotina-data">SEGUNDA, 31 AGO</span>
+                            <span class="rotina-data" id="rotina-data-texto">—</span>
                             <h3 class="rotina-titulo">Sua rotina</h3>
                         </div>
                         <div class="rotina-progresso">
-                            <span class="rotina-progresso-numero">2<span class="rotina-progresso-total">/8</span></span>
+                            <span class="rotina-progresso-numero" id="rotina-concluidas">0</span><span class="rotina-progresso-total">/<span id="rotina-total">0</span></span>
                             <span class="rotina-progresso-label">concluídos</span>
                         </div>
                     </div>
 
                     <div class="rotina-barra">
-                        <div class="rotina-barra-preenchida"></div>
+                        <div class="rotina-barra-preenchida" id="rotina-barra-preenchida" style="width:0%"></div>
                     </div>
 
-                    <ul class="rotina-lista">
-                        <li class="rotina-tarefa concluida">
-                            <input type="checkbox" checked>
-                            <span class="tarefa-horario">07:30</span>
-                            <span class="tarefa-nome">Tomar banho</span>
-                            <span class="tarefa-duracao">20min</span>
-                        </li>
-                        <li class="rotina-tarefa concluida">
-                            <input type="checkbox" checked>
-                            <span class="tarefa-horario">08:00</span>
-                            <span class="tarefa-nome">Café da manhã</span>
-                            <span class="tarefa-duracao">30min</span>
-                        </li>
-                        <li class="rotina-tarefa">
-                            <input type="checkbox">
-                            <span class="tarefa-horario">09:00</span>
-                            <span class="tarefa-nome">Estudar matemática</span>
-                            <span class="tarefa-duracao">60min</span>
-                        </li>
-                        <li class="rotina-tarefa pausa">
-                            <input type="checkbox">
-                            <span class="tarefa-horario">10:00</span>
-                            <span class="tarefa-nome">Pausa sensorial</span>
-                            <span class="tarefa-duracao">pausa</span>
-                        </li>
-                        <li class="rotina-tarefa">
-                            <input type="checkbox">
-                            <span class="tarefa-horario">12:00</span>
-                            <span class="tarefa-nome">Almoço</span>
-                            <span class="tarefa-duracao">40min</span>
-                        </li>
-                        <li class="rotina-tarefa">
-                            <input type="checkbox">
-                            <span class="tarefa-horario">16:00</span>
-                            <span class="tarefa-nome">Sessão — Dra. Camila</span>
-                            <span class="tarefa-duracao">50min</span>
-                        </li>
-                        <li class="rotina-tarefa">
-                            <input type="checkbox">
-                            <span class="tarefa-horario">18:00</span>
-                            <span class="tarefa-nome">Tempo livre</span>
-                            <span class="tarefa-duracao">60min</span>
-                        </li>
-                        <li class="rotina-tarefa">
-                            <input type="checkbox">
-                            <span class="tarefa-horario">21:30</span>
-                            <span class="tarefa-nome">Dormir</span>
-                            <span class="tarefa-duracao">480min</span>
-                        </li>
-                    </ul>
+                    <ul class="rotina-lista" id="lista-rotina"></ul>
+
+                    <button type="button" id="abrir-form-rotina" class="btn-add-tarefa">+ Adicionar tarefa</button>
+
+                    <div class="add-tarefa-form" id="form-rotina">
+                        <div class="tipo-tarefa-opcoes">
+                            <button type="button" class="tipo-opcao selecionado" id="tipo-unica" data-tipo="unica">Só hoje</button>
+                            <button type="button" class="tipo-opcao" id="tipo-fixa" data-tipo="fixa">Fixa (repete)</button>
+                        </div>
+
+                        <div class="dias-fixos-opcoes" id="dias-fixos-opcoes" style="display: none;">
+                            <button type="button" class="dia-fixo-opcao" data-dia="dom">D</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="seg">S</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="ter">T</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="qua">Q</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="qui">Q</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="sex">S</button>
+                            <button type="button" class="dia-fixo-opcao" data-dia="sab">S</button>
+                        </div>
+
+                        <input type="time" id="novo-horario-rotina" class="input-nova-tarefa">
+                        <input type="text" id="novo-nome-rotina" class="input-nova-tarefa" placeholder="Nome da tarefa">
+                        <input type="number" id="nova-duracao-rotina" class="input-nova-tarefa" placeholder="Duração (min)" min="1">
+                        <button type="button" id="salvar-tarefa-rotina" class="btn-salvar-tarefa">Adicionar</button>
+                    </div>
+
+                    <button type="button" id="concluir-dia" class="btn-concluir-dia">✓ Concluir dia</button>
                 </div>
 
                 <!-- CARD DIREITO: Bloco de notas -->
@@ -335,7 +304,6 @@
 
             <button id="modal-fechar">✕</button>
 
-            <!-- Cabeçalho, barra e termos: compartilhados pelos 2 passos -->
             <div class="modal-header">
                 <div>
                     <h2 class="modal-titulo">Criar conta gratuita</h2>
@@ -355,8 +323,21 @@
                 </div>
 
                 <div class="modal-campo">
+                    <label>Eu sou:</label>
+                    <div class="modal-perfil-opcoes">
+                        <button type="button" class="perfil-opcao" id="perfil-tea" data-perfil="tea">Pessoa com TEA</button>
+                        <button type="button" class="perfil-opcao" id="perfil-familiar" data-perfil="familiar">Familiar / Responsável</button>
+                    </div>
+                </div>
+
+                <div class="modal-campo">
                     <label for="input-email">E-mail</label>
                     <input type="email" id="input-email" placeholder="seu@email.com">
+                </div>
+
+                <div class="modal-campo">
+                    <label for="input-cpf">CPF</label>
+                    <input type="text" id="input-cpf" placeholder="000.000.000-00" maxlength="14" inputmode="numeric">
                 </div>
 
                 <button id="modal-continuar" class="modal-btn-continuar">Continuar →</button>
@@ -391,7 +372,7 @@
 
         </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
