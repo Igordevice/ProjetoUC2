@@ -89,7 +89,7 @@ body {
 }
 
 .cores {
-    width: 22px;
+    width: px;
     height: 22px;
     border-radius: 11px;
     box-shadow: 0 0 0 2px #F2F7FB;
@@ -1250,10 +1250,7 @@ body {
 
 /*Início do CTA Final*/
 #cta-final {
-    background: linear-gradient(135deg,
-            color-mix(in srgb, var(--cor-principal) 55%, #1C2F44 45%) 0%,
-            var(--cor-principal) 60%,
-            var(--cor-secundaria) 100%);
+    background: linear-gradient(135deg, #1C2F44 0%, #33496A 55%, #4A6C99 100%);
     padding: 100px 80px;
     text-align: center;
 }
@@ -1363,7 +1360,7 @@ body {
 }
 
 .footer-badge {
-    background: var(--grad-1);
+    background: #EAF1F9;
     color: var(--cor-principal);
     font-family: Lexend;
     font-size: 11px;
@@ -1406,7 +1403,7 @@ body {
 
 #footer-divisor {
     height: 1px;
-    background: var(--grad-1);
+    background: #EAF1F9;
 }
 
 #footer-base {
