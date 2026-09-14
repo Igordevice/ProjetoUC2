@@ -1,0 +1,213 @@
+.protecao-card {
+    width: 50%;
+    height: 60%;
+    padding: 28px;
+    background: white;
+    box-shadow: 0px 2px 20px rgba(92, 136, 191, 0.05);
+    border-radius: 20px;
+    outline: 0.8px #D6E7F5 solid;
+    outline-offset: -0.8px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Ícone principal */
+
+.icone-protecao {
+    width: 44px;
+    padding: 12px;
+    background: rgba(224, 112, 112, 0.13);
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.icone {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.icone-forma {
+    width: 14px;
+    height: 17.5px;
+    left: 3px;
+    top: 2px;
+    position: absolute;
+    opacity: 0.8;
+    background: #E07070;
+}
+
+.icone-detalhe {
+    width: 6px;
+    height: 4px;
+    left: 7px;
+    top: 8px;
+    position: absolute;
+    outline: 1.5px white solid;
+    outline-offset: -0.75px;
+}
+
+/* Título */
+
+.titulo-container {
+    width: 353.06px;
+    height: 46px;
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.titulo {
+    color: #1C2F44;
+    font-size: 17px;
+    font-family: Lexend;
+    font-weight: 700;
+    line-height: 25.5px;
+    word-wrap: break-word;
+}
+
+/* Subtítulo */
+
+.subtitulo-container {
+    width: 353.06px;
+    height: 27px;
+    padding-top: 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.subtitulo {
+    color: #5A6F84;
+    font-size: 14px;
+    font-family: Lexend;
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+}
+
+/* Área do alerta */
+
+.alerta-container {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.alerta {
+    width: 90%;
+    padding: 24px;
+    background: rgba(224, 112, 112, 0.06);
+    border-radius: 16px;
+    outline: 1.6px #E07070 solid;
+    outline-offset: -1.6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Ícone do alerta */
+
+.icone-alerta {
+    width: 100%;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Texto "Proteção ativa" */
+
+.protecao-ativa-container {
+    width: 100%;
+    height: 34px;
+    padding-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.protecao-ativa {
+    text-align: center;
+    padding-left: 5px;
+    color: #E07070;
+    font-size: 16px;
+    font-family: Lexend;
+    font-weight: 700;
+    line-height: 24px;
+  
+}
+
+/* Descrição */
+
+.descricao-container {
+    width: 100%;
+    height: 24px;
+    padding-top: 4px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.descricao {
+    text-align: center;
+    color: #5A6F84;
+    font-size: 13px;
+    padding-left: 5%;
+    font-family: Lexend;
+    font-weight: 400;
+    line-height: 19.5px;
+    word-wrap: break-word;
+}
+
+/* Botão */
+
+.botao-protecao {
+    width: 100%;
+    height: 52.5px;
+    min-height: 52px;
+    position: relative;
+
+    background: #E07070;
+    box-shadow: 0px 6px 20px rgba(224, 112, 112, 0.25);
+    border-radius: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-botao {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: Lexend;
+    font-weight: 700;
+    line-height: 22.5px;
+    word-wrap: break-word;
+}
