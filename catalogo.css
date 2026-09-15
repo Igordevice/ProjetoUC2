@@ -1,0 +1,564 @@
+/* ==========================================================================
+   catalogo.css - Estilos específicos do Catálogo de Profissionais
+   Projeto SinguLar
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Reset de Topo e Container Geral
+   -------------------------------------------------------------------------- */
+
+   
+body {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.catalogo-container {
+  font-family: 'Lexend', sans-serif;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 24px 80px;
+  box-sizing: border-box;
+  position: relative; /* Âncora para o botão de voltar absoluto */
+}
+
+/* --------------------------------------------------------------------------
+   2. Botão Voltar ao Início (Posicionado no Topo)
+   -------------------------------------------------------------------------- */
+.catalogo-nav-voltar {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  margin: 0;
+  z-index: 10;
+}
+
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  color: #5A6F84;
+  border: 1px solid #E2E8F0;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(28, 47, 68, 0.04);
+  transition: all 0.2s ease;
+}
+
+.btn-voltar:hover {
+  background-color: var(--grad-1);
+  color: var(--cor-principal);
+  border-color: var(--cor-principal);
+  transform: translateX(-3px);
+  box-shadow: 0 4px 10px rgba(92, 136, 191, 0.15);
+}
+
+.btn-voltar svg {
+  transition: transform 0.2s ease;
+}
+
+.btn-voltar:hover svg {
+  transform: translateX(-2px);
+}
+
+.btn-voltar:active {
+  transform: scale(0.98);
+}
+
+/* --------------------------------------------------------------------------
+   3. Cabeçalho da Página
+   -------------------------------------------------------------------------- */
+.catalogo-cabecalho {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalogo-badge-topo {
+  display: inline-block;
+  background-color: var(--grad-1);
+  color: var(--cor-principal);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.catalogo-titulo {
+  color: #1C2F44;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.02em;
+}
+
+.catalogo-subtitulo {
+  color: #5A6F84;
+  font-size: 0.95rem;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   4. Barra de Filtros e Busca
+   -------------------------------------------------------------------------- */
+.catalogo-controles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.catalogo-filtros-grupo-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.catalogo-filtros-grupo-direita {
+  display: flex;
+  align-items: center;
+}
+
+/* Campo de busca */
+.campo-busca-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 999px;
+  padding: 8px 16px;
+  gap: 10px;
+  box-shadow: 0 2px 6px rgba(28, 47, 68, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo-busca-wrapper:focus-within {
+  border-color: var(--cor-principal);
+  box-shadow: 0 0 0 3px rgba(92, 136, 191, 0.2);
+}
+
+.campo-busca-wrapper input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.85rem;
+  color: #1C2F44;
+  width: 210px;
+}
+
+.campo-busca-wrapper input::placeholder {
+  color: #94A3B8;
+}
+
+/* Pílulas de filtro */
+.grupo-pilulas {
+  display: flex;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 999px;
+  padding: 3px;
+  gap: 4px;
+  box-shadow: 0 2px 6px rgba(28, 47, 68, 0.04);
+}
+
+.btn-pilula {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #5A6F84;
+  transition: all 0.2s ease;
+}
+
+.btn-pilula:hover {
+  color: #1C2F44;
+}
+
+.btn-pilula.ativa {
+  background-color: var(--grad-1);
+  color: var(--cor-principal);
+  font-weight: 600;
+}
+
+/* Toggle Disponibilidade */
+.toggle-disponivel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 999px;
+  padding: 8px 16px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(28, 47, 68, 0.04);
+  transition: border-color 0.2s ease;
+}
+
+.toggle-disponivel input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toggle-disponivel .ponto-status {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #CBD5E1;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.toggle-disponivel .rotulo-status {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #5A6F84;
+}
+
+.toggle-disponivel input:checked + .ponto-status {
+  background-color: #10B981;
+  transform: scale(1.15);
+}
+
+.toggle-disponivel input:checked ~ .rotulo-status {
+  color: #1C2F44;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   5. Contador de Resultados
+   -------------------------------------------------------------------------- */
+.catalogo-info-resultados {
+  font-size: 0.85rem;
+  color: #5A6F84;
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+
+.catalogo-info-resultados span {
+  font-weight: 700;
+  color: #1C2F44;
+}
+
+/* --------------------------------------------------------------------------
+   6. Grade de Cards
+   -------------------------------------------------------------------------- */
+.catalogo-grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.grade-vazia {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  border: 1px dashed #CBD5E1;
+  color: #5A6F84;
+}
+
+.grade-vazia h3 {
+  color: #1C2F44;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   7. Card Individual de Profissional
+   -------------------------------------------------------------------------- */
+.card-profissional {
+  background-color: #FFFFFF;
+  border: 1px solid #EAEFF5;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(28, 47, 68, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card-profissional:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(28, 47, 68, 0.09);
+  border-color: #DDE7F0;
+}
+
+.card-topo {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.foto-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-foto {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.indicador-online-foto {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  background-color: #10B981;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.card-identificacao {
+  flex-grow: 1;
+}
+
+.card-nome {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1C2F44;
+  margin: 0 0 2px 0;
+}
+
+.card-crp {
+  font-size: 0.75rem;
+  color: #8396A8;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag-item {
+  background-color: var(--grad-1);
+  color: var(--cor-principal);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.card-avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1C2F44;
+  flex-shrink: 0;
+}
+
+.icone-estrela {
+  color: #F59E0B;
+}
+
+.card-bio {
+  color: #5A6F84;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 10px 0 16px 0;
+  min-height: 48px;
+}
+
+/* Métricas internas */
+.card-metricas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--grad-2);
+  border-radius: 12px;
+  padding: 10px 8px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.metrica-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metrica-item:not(:last-child) {
+  border-right: 1px solid #E2EBF2;
+}
+
+.metrica-valor {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1C2F44;
+}
+
+.metrica-rotulo {
+  font-size: 0.68rem;
+  color: #72879C;
+  font-weight: 400;
+}
+
+/* Rodapé do Card */
+.card-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 14px;
+  gap: 12px;
+}
+
+.preco-bloco {
+  display: flex;
+  flex-direction: column;
+}
+
+.preco-valor {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--cor-principal);
+}
+
+.preco-sufixo {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: #72879C;
+}
+
+.preco-status-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+}
+
+.status-tag-disponivel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #059669;
+}
+
+.status-tag-indisponivel {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #8496A6;
+}
+
+.modalidade-tag {
+  font-size: 0.7rem;
+  color: #72879C;
+}
+
+/* Botões do Card */
+.btn-agendar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--cor-principal);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 999px;
+  padding: 9px 20px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-agendar:hover {
+  background-color: #4C77AC;
+  box-shadow: 0 4px 12px rgba(92, 136, 191, 0.35);
+}
+
+.btn-agendar:active {
+  transform: scale(0.97);
+}
+
+.btn-espera {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #E2EBF3;
+  color: #6C8299;
+  border: none;
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-espera:hover {
+  background-color: #D3E0EC;
+  color: #4D647B;
+}
+
+/* --------------------------------------------------------------------------
+   8. Responsividade
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  /* Em telas menores, o botão de voltar volta a ocupar fluxo normal para não sobrepor o cabeçalho */
+  .catalogo-nav-voltar {
+    position: static;
+    margin-bottom: 16px;
+  }
+
+  .catalogo-controles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .campo-busca-wrapper {
+    width: 100%;
+  }
+
+  .campo-busca-wrapper input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalogo-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogo-titulo {
+    font-size: 1.75rem;
+  }
+}
