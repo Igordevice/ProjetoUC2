@@ -6,7 +6,9 @@
     --grad-3: #E4F3EE;
 }
 
-
+* {
+    margin: 0;
+}
 
 html {
     scroll-behavior: smooth;
@@ -47,12 +49,12 @@ body {
 
 #name {
     color: var(--cor-principal);
-    font-family: 'Poppins',  -apple-system, sans-serif;
+    font-family: Lexend;
     font-size: 25px;
     font-style: normal;
     font-weight: 800;
     line-height: 30px;
-    margin-left: 50px;
+    margin: 0 0 0 50px;
 }
 
 .head {
@@ -130,7 +132,7 @@ body {
 }
 
 .cores {
-    width: px;
+    width: 22px;
     height: 22px;
     border-radius: 11px;
     box-shadow: 0 0 0 2px #F2F7FB;
@@ -218,10 +220,10 @@ body {
     cursor: pointer;
 }
 
-#container {
+#bagde-hero {
     position: absolute;
     top: 70px;
-    left: 80px;
+    left: 100px;
     display: flex;
     width: 500px;
     height: 32px;
@@ -243,7 +245,7 @@ body {
 }
 
 #frase_rotina {
-    width: 300px;
+    width: 560px;
     font-family: Lexend;
     font-size: 56px;
     font-style: normal;
@@ -252,7 +254,7 @@ body {
     line-height: 60.48px;
     letter-spacing: -2px;
     margin-top: 130px;
-    margin-left: 80px;
+    margin-left: 150px;
 }
 
 .btn-add-tarefa {
@@ -316,7 +318,7 @@ body {
     font-weight: 400;
     line-height: 30.6px;
     margin-top: 10px;
-    margin-left: 80px;
+    margin-left: 150px;
 }
 
 #menino {
@@ -326,7 +328,7 @@ body {
     width: 600px;
     height: 440px;
     background-size: cover;
-    left: 800px;
+    left: 860px;
     top: 131.2px;
     border-radius: 100px;
 }
@@ -427,7 +429,7 @@ body {
     align-items: center;
     gap: 16px;
     margin-top: 32px;
-    margin-left: 80px;
+    margin-left: 150px;
 }
 
 #btn-comecar {
@@ -460,7 +462,7 @@ body {
     display: flex;
     gap: 60px;
     margin-top: 48px;
-    margin-left: 80px;
+    margin-left: 150px;
 }
 
 .stat {
@@ -487,7 +489,7 @@ body {
 /* Personalizar tema */
 #personalizar-tema {
     margin-top: 48px;
-    margin-left: 80px;
+    margin-left: 150px;
     position: relative;
     z-index: 3;
 }
