@@ -6,17 +6,20 @@
     --grad-3: #E4F3EE;
 }
 
-* {
-    margin: 0;
-}
+
 
 html {
     scroll-behavior: smooth;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background: linear-gradient(140deg, var(--grad-1) 3.67%, var(--grad-2) 50%, var(--grad-3) 96.33%);
     padding-top: 68.8px;
+    overflow-x: hidden;
 }
 
 /*Início da Header*/
@@ -49,12 +52,12 @@ body {
 
 #name {
     color: var(--cor-principal);
-    font-family: Lexend;
+    font-family: 'Poppins',  -apple-system, sans-serif;
     font-size: 25px;
     font-style: normal;
     font-weight: 800;
     line-height: 30px;
-    margin: 0 0 0 50px;
+    margin-left: 50px;
 }
 
 .head {
@@ -78,57 +81,14 @@ body {
     font-weight: 600;
 }
 
-/* Contêiner que alinha os botões lado a lado */
-.area-botao {
+#botao {
+    position: relative;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
-    gap: 16px;
-    /* Espaço entre os botões */
-    align-items: center;
-    width: 100%;
-}
-
-/* Estilo individual de cada botão */
-.botao {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    /* Espaço entre o coração e o texto */
-
-    background-color: #5582ba;
-    /* Tom de azul do layout */
-    color: #ffffff;
-
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 600;
-
-    padding: 14px 20px;
-    border: none;
-    border-radius: 12px;
-    /* Cantos arredondados */
-
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(85, 130, 186, 0.25);
-    /* Sombra suave */
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-/* Efeito ao passar o mouse */
-.botao:hover {
-    background-color: #4872a6;
-}
-
-/* Efeito ao clicar */
-.botao:active {
-    transform: scale(0.98);
-}
-
-/* Estilo do ícone de coração */
-.icone {
-    font-size: 14px;
-    line-height: 1;
+    width: 140px;
+    padding-right: 120px;
 }
 
 .cores {
@@ -220,12 +180,13 @@ body {
     cursor: pointer;
 }
 
-#bagde-hero {
+#container {
     position: absolute;
     top: 70px;
-    left: 100px;
+    left: 80px;
     display: flex;
     width: 500px;
+    max-width: calc(100% - 40px);
     height: 32px;
     padding-left: 50px;
     align-items: center;
@@ -245,7 +206,7 @@ body {
 }
 
 #frase_rotina {
-    width: 560px;
+    width: 300px;
     font-family: Lexend;
     font-size: 56px;
     font-style: normal;
@@ -254,7 +215,7 @@ body {
     line-height: 60.48px;
     letter-spacing: -2px;
     margin-top: 130px;
-    margin-left: 150px;
+    margin-left: 80px;
 }
 
 .btn-add-tarefa {
@@ -311,6 +272,7 @@ body {
 
 #planejamento {
     width: 460px;
+    max-width: 100%;
     color: #5A6F84;
     font-family: Lexend;
     font-size: 18px;
@@ -318,7 +280,7 @@ body {
     font-weight: 400;
     line-height: 30.6px;
     margin-top: 10px;
-    margin-left: 150px;
+    margin-left: 80px;
 }
 
 #menino {
@@ -328,7 +290,7 @@ body {
     width: 600px;
     height: 440px;
     background-size: cover;
-    left: 860px;
+    left: 800px;
     top: 131.2px;
     border-radius: 100px;
 }
@@ -364,120 +326,6 @@ body {
     color: var(--cor-principal);
     font-size: 12px;
     font-weight: 600;
-/* Estrutura Principal */
-.container {
-    width: 100%;
-    padding: 96px 32px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-}
-
-.conteudo {
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* Header/Topo */
-.badge-tag {
-    background-color: var(--grad-1);
-    border-radius: 99px;
-    padding: 4px 15px;
-    margin-bottom: 12px;
-    align-self: center;
-}
-
-.quem-usa {
-    color: var(--cor-principal);
-    font-size: 11px;
-    font-family: 'Lexend', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.titulo {
-    color: #1C2F44;
-    font-size: 44px;
-    font-family: 'Lexend', sans-serif;
-    font-weight: 800;
-    line-height: 66px;
-    text-align: center;
-    align-self: center;
-    margin-bottom: 48px;
-}
-
-/* Categorias */
-
-.categoria {
-    width: 100%;
-    margin-top: 24px;
-    margin-bottom: 16px;
-}
-
-.subtitulo1, .subtitulo2 {
-    color: #5A6F84;
-    font-size: 11px;
-    font-family: 'Lexend', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Grid de Cards */
-.lista-cards {
-    display: flex;
-    gap: 24px;
-    width: 100%;
-    margin-bottom: 32px;
-}
-
-.card {
-    flex: 1;
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 28px;
-    box-shadow: 0px 2px 20px rgba(92, 136, 191, 0.05);
-    border: 1px solid #D6E7F5;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card-profissional {
-    border-color: rgba(123, 179, 160, 0.40);
-}
-
-.card-topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-/* Estrelas e Selos */
-.estrelas {
-    color: var(--cor-principal);
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-bottom: 16px;
-}
-
-.estrelas-prof {
-    color: #7BB3A0;
-    font-size: 16px;
-    letter-spacing: 2px;
-}
-
-.selo-prof {
-    background: rgba(123, 179, 160, 0.09);
-    color: #7BB3A0;
-    font-size: 11px;
-    font-family: 'Lexend', sans-serif;
-    font-weight: 700;
     padding: 3px 10px;
     border-radius: 99px;
 }
@@ -543,7 +391,8 @@ body {
     align-items: center;
     gap: 16px;
     margin-top: 32px;
-    margin-left: 150px;
+    margin-left: 80px;
+    flex-wrap: wrap;
 }
 
 #btn-comecar {
@@ -576,62 +425,11 @@ body {
     display: flex;
     gap: 60px;
     margin-top: 48px;
-    margin-left: 150px;
+    margin-left: 80px;
+    flex-wrap: wrap;
 }
 
 .stat {
-/* Textos do Card */
-.depoimento1, .depoimento2, .depoimento3,
-.depoimento4, .depoimento5, .depoimento6 {
-    color: #1C2F44;
-    font-size: 15px;
-    font-family: 'Lexend', sans-serif;
-    font-weight: 400;
-    line-height: 26.25px;
-    margin-bottom: 22px;
-}
-
-/* Autor */
-.autor {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.autor img {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
-}
-
-.nome1, .nome2, .nome3, .nome4, .nome5, .nome6 {
-    color: #1C2F44;
-    font-size: 14px;
-    font-family: 'Lexend', sans-serif;
-    font-weight: 700;
-    line-height: 21px;
-}
-
-.tag1, .tag2, .tag3, .tag4, .tag5, .tag6 {
-    color: #5A6F84;
-    font-size: 12px;
-    font-family: 'Lexend', sans-serif;
-    font-weight: 400;
-    line-height: 18px;
-}
-
-/* Reset Básico de Iniciante */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Lexend', sans-serif;
-}
-
-.container-planos {
-    width: 100%;
-    background-color: var(--grad-2);
-    padding: 96px 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -655,7 +453,8 @@ body {
 /* Personalizar tema */
 #personalizar-tema {
     margin-top: 48px;
-    margin-left: 150px;
+    margin-left: 80px;
+    margin-right: 80px;
     position: relative;
     z-index: 3;
 }
@@ -674,6 +473,7 @@ body {
 .temas-lista {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .tema-item {
@@ -740,6 +540,7 @@ body {
     align-items: center;
     gap: 40px;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .destaque-item {
@@ -772,39 +573,10 @@ body {
     background: #EAF1F9;
     border-radius: 12px;
     padding: 4px;
-/* Cabeçalho */
-.badge-planos {
-    background-color: var(--grad-1);
-    border-radius: 99px;
-    padding: 4px 15px;
-    margin-bottom: 12px;
-}
-
-.badge-planos span {
-    color: var(--cor-principal);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.titulo-planos {
-    color: #1C2F44;
-    font-size: 44px;
-    font-weight: 800;
-    margin-bottom: 24px;
-    text-align: center;
-}
-
-/* Toggle Usuário/Profissional */
-.toggle-container {
-    background: #FFFFFF;
-    border: 1px solid #D6E7F5;
-    border-radius: 14px;
-    padding: 4px;
-    display: flex;
     gap: 4px;
     margin-bottom: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .aba {
@@ -828,6 +600,7 @@ body {
 .cards-funcionamento {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 .conteudo-aba-tea {
@@ -835,7 +608,7 @@ body {
 }
 
 .card-funcionamento {
-    flex: 1;
+    flex: 1 1 220px;
     background: #FFF;
     border-radius: 16px;
     padding: 24px;
@@ -876,8 +649,10 @@ body {
 
 /* Módulo Rotina Visual */
 #modulo-rotina-visual {
-    padding: 80px;
+    padding: 80px 80px 120px;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .modulo-label {
@@ -918,115 +693,10 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .check-item {
-.btn-toggle {
-    border: none;
-    background: transparent;
-    padding: 10px 24px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #5A6F84;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.btn-toggle.ativo {
-    background: var(--cor-principal);
-    color: #FFFFFF;
-}
-
-/* Grid de Cards */
-.grid-planos {
-    display: flex;
-    gap: 24px;
-    max-width: 1280px;
-    width: 100%;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.card-plano {
-    flex: 1;
-    background: #FFFFFF;
-    border: 1px solid #D6E7F5;
-    border-radius: 20px;
-    padding: 32px;
-    position: relative;
-    box-shadow: 0px 2px 20px rgba(92, 136, 191, 0.05);
-    display: flex;
-    flex-direction: column;
-}
-
-.card-destaque {
-    border: 2px solid var(--cor-principal);
-    box-shadow: 0px 20px 60px rgba(92, 136, 191, 0.13);
-}
-
-.badge-destaque {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: var(--cor-principal);
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 12px;
-    border-radius: 99px;
-}
-
-/* Elementos do Card */
-.icone-plano {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    margin-bottom: 12px;
-}
-
-.icon-cinza { background: var(--grad-2); }
-.icon-azul { background: rgba(92, 136, 191, 0.13); }
-.icon-verde { background: rgba(123, 179, 160, 0.13); }
-
-.tag-sub {
-    color: #5A6F84;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.nome-plano {
-    color: #1C2F44;
-    font-size: 20px;
-    font-weight: 800;
-    margin-bottom: 8px;
-}
-
-.preco-plano {
-    color: #5A6F84;
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 24px;
-}
-
-.preco-plano span {
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.preco-azul { color: var(--cor-principal); }
-.preco-verde { color: #7BB3A0; }
-
-/* Listas */
-.lista-recursos {
-    list-style: none;
-    margin-bottom: 32px;
-    flex-grow: 1;
-}
-
-.lista-recursos li {
-    color: #1C2F44;
-    font-size: 14px;
-    margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -1064,11 +734,12 @@ body {
     max-width: 1200px;
     margin: 40px auto 0 auto;
     text-align: left;
+    flex-wrap: wrap;
 }
 
 /* ===== CARD DA ROTINA (dias da semana) ===== */
 .card-sua-rotina {
-    flex: 1;
+    flex: 1 1 320px;
     background: #FFF;
     border-radius: 20px;
     padding: 24px;
@@ -1254,10 +925,11 @@ body {
 .tipo-tarefa-opcoes {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .tipo-opcao {
-    flex: 1;
+    flex: 1 1 100px;
     background: #F2F7FB;
     color: #5A6F84;
     font-family: Lexend;
@@ -1278,10 +950,11 @@ body {
 .dias-fixos-opcoes {
     display: flex;
     gap: 4px;
+    flex-wrap: wrap;
 }
 
 .dia-fixo-opcao {
-    flex: 1;
+    flex: 1 1 30px;
     background: #F2F7FB;
     color: #5A6F84;
     border: 1.5px solid #D6E7F5;
@@ -1316,7 +989,7 @@ body {
 
 /* ===== CARD DE ANOTAÇÕES ===== */
 .card-anotacoes {
-    flex: 1;
+    flex: 1 1 320px;
     background: #FDF9E9;
     border-radius: 20px;
     overflow: hidden;
@@ -1426,11 +1099,15 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 100;
+    padding: 20px;
 }
 
 #modal-criar-conta {
     background: #FFF;
     width: 400px;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
     padding: 32px;
     border-radius: 24px;
     position: relative;
@@ -1500,10 +1177,11 @@ body {
 .modal-perfil-opcoes {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .perfil-opcao {
-    flex: 1;
+    flex: 1 1 100px;
     background: #F2F7FB;
     color: #5A6F84;
     font-family: Lexend;
@@ -1596,7 +1274,10 @@ body {
 
 /*Início do CTA Final*/
 #cta-final {
-    background: linear-gradient(135deg, #1C2F44 0%, #33496A 55%, #4A6C99 100%);
+    background: linear-gradient(135deg,
+            color-mix(in srgb, var(--cor-principal) 55%, #1C2F44 45%) 0%,
+            var(--cor-principal) 60%,
+            var(--cor-secundaria) 100%);
     padding: 100px 80px;
     text-align: center;
 }
@@ -1621,6 +1302,7 @@ body {
     justify-content: center;
     gap: 16px;
     margin-top: 32px;
+    flex-wrap: wrap;
 }
 
 #btn-cta-criar-conta {
@@ -1707,7 +1389,7 @@ body {
 }
 
 .footer-badge {
-    background: #EAF1F9;
+    background: var(--grad-1);
     color: var(--cor-principal);
     font-family: Lexend;
     font-size: 11px;
@@ -1750,7 +1432,7 @@ body {
 
 #footer-divisor {
     height: 1px;
-    background: #EAF1F9;
+    background: var(--grad-1);
 }
 
 #footer-base {
@@ -1765,60 +1447,316 @@ body {
 }
 
 /*Fim do Footer*/
-.check {
-    width: 20px;
-    height: 20px;
-    background: var(--grad-2);
-    border-radius: 6px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 11px;
-    color: #5A6F84;
+
+/* ==========================================================================
+   RESPONSIVO
+   O layout original usa posicionamento absoluto com valores fixos no header
+   e no hero (#container, #frase_rotina, #menino, #card-rotina, etc). Isso
+   funciona bem em telas largas, mas quebra em telas menores. As regras
+   abaixo reorganizam esses elementos em fluxo normal (empilhados, com
+   flexbox) conforme a tela diminui, sem alterar a aparência em desktop.
+   ========================================================================== */
+
+/* ---------- Tablets grandes / notebooks pequenos ---------- */
+@media (max-width: 1200px) {
+    #hero {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    #menino {
+        left: auto;
+        right: 20px;
+        width: 42vw;
+        height: 340px;
+        min-width: 260px;
+    }
+
+    #card-rotina {
+        left: auto;
+        right: 30px;
+        top: 420px;
+    }
+
+    #frase_rotina,
+    #planejamento,
+    #botoes-hero,
+    #estatisticas,
+    #personalizar-tema {
+        margin-left: 0;
+    }
+
+    #como-funciona,
+    #modulo-rotina-visual {
+        padding: 60px 40px;
+    }
+
+    #cta-final {
+        padding: 80px 40px;
+    }
+
+    #footer-principal {
+        padding: 60px 40px 0;
+    }
 }
 
-.check-azul {
-    background: rgba(92, 136, 191, 0.13);
-    color: var(--cor-principal);
+/* ---------- Tablets / telas médias: header e hero viram coluna ---------- */
+@media (max-width: 960px) {
+    #header_menu {
+        justify-content: space-between;
+        padding: 0 20px;
+        height: auto;
+        min-height: 68.8px;
+        flex-wrap: wrap;
+    }
+
+    #name {
+        margin-left: 0;
+    }
+
+    #link {
+        order: 3;
+        width: 100%;
+        padding-right: 0;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 4px;
+        padding-bottom: 8px;
+    }
+
+    #link::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    #botao {
+        width: auto;
+        padding-right: 0;
+        gap: 8px;
+    }
+
+    #login,
+    #area-usuario {
+        margin-right: 0;
+    }
+
+    /* Hero vira uma coluna única, tudo em fluxo normal */
+    #hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 24px 0;
+        text-align: center;
+    }
+
+    #container {
+        position: static;
+        width: 100%;
+        max-width: 460px;
+        height: auto;
+        padding: 10px 20px;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto 24px auto;
+        order: 1;
+    }
+
+    #frase_rotina {
+        position: static;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 40px;
+        line-height: 1.15;
+        letter-spacing: -1px;
+        order: 2;
+    }
+
+    #planejamento {
+        position: static;
+        width: 100%;
+        max-width: 520px;
+        margin: 16px auto 0 auto;
+        order: 3;
+    }
+
+    #menino {
+        position: static;
+        width: 100%;
+        max-width: 480px;
+        height: 320px;
+        margin: 32px auto 0 auto;
+        order: 4;
+    }
+
+    #card-rotina {
+        position: static;
+        width: 100%;
+        max-width: 340px;
+        margin: 24px auto 0 auto;
+        order: 5;
+    }
+
+    #botoes-hero {
+        position: static;
+        margin: 32px auto 0 auto;
+        justify-content: center;
+        order: 6;
+    }
+
+    #estatisticas {
+        position: static;
+        margin: 40px auto 0 auto;
+        justify-content: center;
+        gap: 40px;
+        order: 7;
+    }
+
+    #personalizar-tema {
+        margin: 40px auto 0 auto;
+        text-align: center;
+        order: 8;
+    }
+
+    #personalizar-tema-titulo {
+        text-align: center;
+    }
+
+    .temas-lista {
+        justify-content: center;
+    }
+
+    #faixa-destaques {
+        margin-top: 48px;
+    }
+
+    .cards-funcionamento,
+    .cards-modulo {
+        justify-content: center;
+    }
+
+    .modulo-titulo {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    #cta-final-titulo {
+        font-size: 32px;
+        line-height: 1.2;
+    }
 }
 
-.check-verde {
-    background: rgba(123, 179, 160, 0.13);
-    color: #7BB3A0;
-}
+/* ---------- Celulares ---------- */
+@media (max-width: 600px) {
+    #header_menu {
+        padding: 12px 16px;
+    }
 
-/* Botões */
-.btn-card {
-    width: 100%;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    border: none;
-}
+    #name {
+        font-size: 20px;
+    }
 
-.btn-outline {
-    background: transparent;
-    border: 2px solid #D6E7F5;
-    color: var(--cor-principal);
-}
+    .head {
+        font-size: 15px;
+        padding: 6px 10px;
+    }
 
-.btn-azul {
-    background: var(--cor-principal);
-    color: white;
-    box-shadow: 0px 6px 20px rgba(92, 136, 191, 0.25);
-}
+    #login {
+        width: auto;
+        margin-right: 0;
+        padding: 10px 16px;
+    }
 
-.btn-verde {
-    background: #7BB3A0;
-    color: white;
-    box-shadow: 0px 6px 20px rgba(123, 179, 160, 0.25);
-}
+    #hero {
+        padding: 32px 16px 0;
+    }
 
-.nota-rodape {
-    color: #5A6F84;
-    font-size: 13px;
-    margin-top: 24px;
-    text-align: center;
+    #frase_rotina {
+        font-size: 30px;
+    }
+
+    #planejamento {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    #menino {
+        height: 220px;
+        border-radius: 40px;
+    }
+
+    #botoes-hero {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #btn-comecar,
+    #btn-ver-como-funciona {
+        width: 100%;
+        text-align: center;
+    }
+
+    #estatisticas {
+        gap: 24px;
+    }
+
+    .stat-numero {
+        font-size: 24px;
+    }
+
+    #como-funciona,
+    #modulo-rotina-visual {
+        padding: 48px 20px;
+    }
+
+    .modulo-titulo {
+        font-size: 26px;
+    }
+
+    .modulo-checklist {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-modulo {
+        flex-direction: column;
+    }
+
+    #cta-final {
+        padding: 56px 20px;
+    }
+
+    #cta-final-titulo {
+        font-size: 26px;
+    }
+
+    #cta-final-botoes {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #btn-cta-criar-conta,
+    #btn-cta-planos {
+        width: 100%;
+    }
+
+    #footer-principal {
+        padding: 48px 20px 0;
+        margin-top: 80px;
+    }
+
+    #footer-topo {
+        gap: 32px;
+    }
+
+    #footer-colunas {
+        gap: 32px;
+        width: 100%;
+    }
+
+    #modal-criar-conta {
+        padding: 24px;
+        border-radius: 18px;
+    }
 }

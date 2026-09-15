@@ -24,12 +24,21 @@
   display: flex;
   justify-content: center;
   padding: 80px 20px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  z-index: 5;
+  margin-top: 40px;
 }
 
 .page {
   margin: 50px;
   width: 100%;
+  max-width: 100%;
   overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .glow {
@@ -264,7 +273,13 @@ h1 {
     padding: 40px 16px;
   }
   .page {
-    margin: 24px;
+    margin: 24px 0;
+  }
+  .glow {
+    width: 260px;
+    height: 260px;
+    top: -80px;
+    right: -100px;
   }
   .container {
     grid-template-columns: 1fr;
@@ -279,6 +294,7 @@ h1 {
   .tabs {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
   .tabs > *:nth-child(3) {
     grid-column: 1 / -1;
@@ -307,5 +323,8 @@ h1 {
   }
   .feature-card {
     padding: 14px;
+  }
+  .tabs {
+    grid-template-columns: 1fr;
   }
 }
