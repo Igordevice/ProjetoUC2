@@ -1,0 +1,53 @@
+:root {
+    --cor-principal: #5C88BF;
+    --grad-1: #E8F1F8;
+    --grad-2: #F2F7FB;
+    --grad-3: #E4F3EE;
+    --texto-escuro: #1C2F44;
+    --texto-claro: #5A6F84;
+    --borda: #D6E7F5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Lexend', sans-serif; }
+
+.ia-fundo { width: 100vw; height: 100vh; background: var(--grad-1); display: flex; justify-content: center; align-items: center; padding: 40px 20px; overflow-x: hidden; }
+.ia-conteiner { max-width: 1280px; width: 100%; display: flex; gap: 60px; justify-content: space-between; align-items: stretch; flex-wrap: wrap; }
+
+/* Lado Esquerdo - Hero */
+.ia-hero { flex: 1; min-width: 400px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.ia-imagem-destaque { width: 100%; height: 200px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: 0px 12px 40px rgba(92, 136, 191, 0.09); }
+.ia-imagem-destaque img { width: 100%; height: 100%; object-fit: cover; }
+.ia-imagem-destaque::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(180deg, transparent 0%, var(--grad-1) 100%); }
+.ia-badge-flutuante { position: absolute; bottom: 20px; left: 20px; background: white; padding: 10px 16px; border-radius: 12px; display: flex; align-items: center; gap: 10px; box-shadow: 0px 4px 16px rgba(92, 136, 191, 0.13); z-index: 2; }
+.ia-icone-mini { width: 22px; height: 22px; background: var(--grad-1); border-radius: 6px; border: 4px solid var(--cor-principal); opacity: 0.8; }
+.ia-badge-flutuante strong { color: var(--texto-escuro); font-size: 13px; }
+
+.ia-tag-modulo { padding: 4px 14px; background: white; border: 1px solid var(--borda); border-radius: 99px; color: var(--cor-principal); font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+.ia-titulo { color: var(--texto-escuro); font-size: 40px; font-weight: 800; line-height: 1.1; }
+.ia-descricao { color: var(--texto-claro); font-size: 16px; line-height: 1.6; max-width: 420px; }
+
+.ia-exemplos { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 500px; margin-top: 10px; }
+.ia-card-exemplo { background: white; border: 1px solid var(--borda); border-radius: 12px; padding: 14px 16px; color: var(--texto-claro); font-size: 14px; }
+
+/* Lado Direito - Chatbot */
+.ia-chat-interface { flex: 1; min-width: 400px; background: white; border-radius: 20px; border: 1px solid var(--borda); box-shadow: 0px 20px 60px rgba(92, 136, 191, 0.09); display: flex; flex-direction: column; height: 600px; overflow: hidden; }
+.ia-chat-header { padding: 18px 22px; background: linear-gradient(135deg, var(--cor-principal) 0%, #7BB3A0 100%); display: flex; align-items: center; gap: 14px; }
+.ia-icone-header { width: 36px; height: 36px; background: rgba(255,255,255,0.2); border: 6px solid white; border-radius: 10px; opacity: 0.9; }
+.ia-info-header h2 { color: white; font-size: 15px; font-weight: 700; }
+.ia-info-header p { color: rgba(255,255,255,0.8); font-size: 12px; display: flex; align-items: center; gap: 6px; margin-top: 2px;}
+.ponto-online { width: 7px; height: 7px; background: white; border-radius: 50%; opacity: 0.9; }
+
+.ia-chat-mensagens { flex: 1; padding: 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; background: white; }
+.ia-linha-mensagem { display: flex; align-items: flex-end; gap: 10px; width: 100%; }
+.ia-linha-mensagem.ia-msg-sistema { justify-content: flex-start; }
+.ia-linha-mensagem.ia-msg-usuario { justify-content: flex-end; }
+
+.ia-avatar-sistema { width: 30px; height: 30px; background: var(--grad-1); border: 5px solid var(--cor-principal); border-radius: 8px; flex-shrink: 0; margin-bottom: 4px; }
+.ia-balao-sistema { background: var(--grad-2); color: var(--texto-escuro); padding: 12px 16px; border-radius: 16px 16px 16px 4px; font-size: 14px; line-height: 1.5; max-width: 85%; }
+.ia-balao-usuario { background: var(--cor-principal); color: white; padding: 12px 16px; border-radius: 16px 16px 4px 16px; font-size: 14px; line-height: 1.5; max-width: 85%; }
+
+.ia-chat-footer { padding: 16px; border-top: 1px solid var(--borda); background: white; display: flex; gap: 10px; }
+.ia-chat-footer input { flex: 1; height: 48px; background: var(--grad-2); border: 1px solid var(--borda); border-radius: 12px; padding: 0 16px; color: var(--texto-escuro); font-size: 14px; outline: none; transition: border-color 0.2s; }
+.ia-chat-footer input:focus { border-color: var(--cor-principal); }
+.ia-chat-footer button { width: 48px; height: 48px; background: var(--cor-principal); border: none; border-radius: 12px; color: white; font-size: 20px; cursor: pointer; transition: background 0.2s; display: flex; justify-content: center; align-items: center; }
+.ia-chat-footer button:hover { background: #4A6E9B; }

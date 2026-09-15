@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SinguLAR - IA Assistente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="IA.css" type="text/css">
+</head>
+<body class="ia-fundo">
+
+    <main class="ia-conteiner">
+        <!-- Lado Esquerdo: Textos e Explicação -->
+        <section class="ia-hero">
+            <div class="ia-imagem-destaque">
+                <img src="imagens/fotoia.jpeg" alt="Capa IA">
+                <div class="ia-badge-flutuante">
+                    <span class="ia-icone-mini"></span>
+                    <strong>IA que entende você</strong>
+                </div>
+            </div>
+
+            <div class="ia-tag-modulo">MÓDULO 2</div>
+            <h1 class="ia-titulo">Travou?<br>A IA te desbloqueia.</h1>
+            <p class="ia-descricao">Descreva o que precisa fazer com suas palavras. O Singular AI transforma em passos minúsculos, concretos e sem pressão.</p>
+
+            <div class="ia-exemplos">
+                <div class="ia-card-exemplo">"Preciso arrumar meu quarto mas não consigo começar"</div>
+                <div class="ia-card-exemplo">"Tenho uma reunião amanhã e estou travada"</div>
+                <div class="ia-card-exemplo">"Quero criar uma rotina de manhã mais calma"</div>
+            </div>
+        </section>
+
+        <!-- Lado Direito: O Chatbot Real -->
+        <section class="ia-chat-interface">
+            <header class="ia-chat-header">
+                <div class="ia-icone-header"></div>
+                <div class="ia-info-header">
+                    <h2>Singular AI</h2>
+                    <p><span class="ponto-online"></span> Sempre disponível</p>
+                </div>
+            </header>
+
+            <div class="ia-chat-mensagens" id="ia-chat-mensagens">
+                <!-- Mensagem Inicial da IA -->
+                <div class="ia-linha-mensagem ia-msg-sistema">
+                    <div class="ia-avatar-sistema"></div>
+                    <div class="ia-balao-sistema">Olá! Como posso ajudar você a organizar sua rotina hoje?</div>
+                </div>
+            </div>
+
+            <footer class="ia-chat-footer">
+                <input type="text" id="ia-input-msg" placeholder="Descreva o que precisa fazer..." autocomplete="off">
+                <button id="ia-btn-enviar">→</button>
+            </footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

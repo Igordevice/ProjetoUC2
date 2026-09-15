@@ -124,7 +124,15 @@
                 <p>Este painel contém dados clínicos protegidos pela LGPD. O acesso é exclusivo para profissionais registrados.</p>
             </div>
             <form id="form-login" class="loginformulario">
-                <div class="input">
+                    <input 
+                    type="text" 
+                    id="crp" 
+                    placeholder="Ex: CRP 06/123456" 
+                    maxlength="14" 
+                    pattern="(CRP|CRM|crp|crm)\s[A-Za-z0-9]{2}\/[0-9]{4,7}"
+                    title="Digite no formato correto: CRP 06/123456"
+                    style="text-transform: uppercase;"
+                    required>
                     <label for="crp">CRP / CRM</label>
                     <input type="text" id="crp" placeholder="Ex: CRP 06/123456" required>
                 </div>
