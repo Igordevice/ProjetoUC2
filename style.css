@@ -1,3 +1,10 @@
+:root {
+    --cor-principal: #5C88BF;
+    --grad-1: #E8F1F8;
+    --grad-2: #F2F7FB;
+    --grad-3: #E4F3EE;
+}
+
 /* Estrutura Principal */
 .container {
     width: 100%;
@@ -17,7 +24,7 @@
 
 /* Header/Topo */
 .badge-tag {
-    background-color: #E8F1F8;
+    background-color: var(--grad-1);
     border-radius: 99px;
     padding: 4px 15px;
     margin-bottom: 12px;
@@ -25,7 +32,7 @@
 }
 
 .quem-usa {
-    color: #5C88BF;
+    color: var(--cor-principal);
     font-size: 11px;
     font-family: 'Lexend', sans-serif;
     font-weight: 700;
@@ -94,7 +101,7 @@
 
 /* Estrelas e Selos */
 .estrelas {
-    color: #5C88BF;
+    color: var(--cor-principal);
     font-size: 16px;
     letter-spacing: 2px;
     margin-bottom: 16px;
@@ -149,9 +156,8 @@
 }
 
 .tag1, .tag2, .tag3, .tag4, .tag5, .tag6 {
-
     color: #5A6F84;
-     font-size: 12px;
+    font-size: 12px;
     font-family: 'Lexend', sans-serif;
     font-weight: 400;
     line-height: 18px;
@@ -167,7 +173,7 @@
 
 .container-planos {
     width: 100%;
-    background-color: #F2F7FB;
+    background-color: var(--grad-2);
     padding: 96px 32px;
     display: flex;
     flex-direction: column;
@@ -176,14 +182,14 @@
 
 /* Cabeçalho */
 .badge-planos {
-    background-color: #E8F1F8;
+    background-color: var(--grad-1);
     border-radius: 99px;
     padding: 4px 15px;
     margin-bottom: 12px;
 }
 
 .badge-planos span {
-    color: #5C88BF;
+    color: var(--cor-principal);
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
@@ -198,7 +204,7 @@
     text-align: center;
 }
 
-/* Toggle Mensal/Anual */
+/* Toggle Usuário/Profissional */
 .toggle-container {
     background: #FFFFFF;
     border: 1px solid #D6E7F5;
@@ -221,17 +227,8 @@
 }
 
 .btn-toggle.ativo {
-    background: #5C88BF;
+    background: var(--cor-principal);
     color: #FFFFFF;
-}
-
-.desconto {
-    background: #E4F3EE;
-    color: #7BB3A0;
-    font-size: 11px;
-    padding: 2px 6px;
-    border-radius: 99px;
-    margin-left: 4px;
 }
 
 /* Grid de Cards */
@@ -257,7 +254,7 @@
 }
 
 .card-destaque {
-    border: 2px solid #5C88BF;
+    border: 2px solid var(--cor-principal);
     box-shadow: 0px 20px 60px rgba(92, 136, 191, 0.13);
 }
 
@@ -265,122 +262,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #5C88BF;
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 12px;
-    border-radius: 99px;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Lexend', sans-serif;
-}
-
-.container-planos {
-    width: 100%;
-    background-color: #F2F7FB;
-    padding: 96px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Cabeçalho */
-.badge-planos {
-    background-color: #E8F1F8;
-    border-radius: 99px;
-    padding: 4px 15px;
-    margin-bottom: 12px;
-}
-
-.badge-planos span {
-    color: #5C88BF;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.titulo-planos {
-    color: #1C2F44;
-    font-size: 44px;
-    font-weight: 800;
-    margin-bottom: 24px;
-    text-align: center;
-}
-
-/* Toggle Mensal/Anual */
-.toggle-container {
-    background: #FFFFFF;
-    border: 1px solid #D6E7F5;
-    border-radius: 14px;
-    padding: 4px;
-    display: flex;
-    gap: 4px;
-    margin-bottom: 48px;
-}
-
-.btn-toggle {
-    border: none;
-    background: transparent;
-    padding: 10px 24px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #5A6F84;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.btn-toggle.ativo {
-    background: #5C88BF;
-    color: #FFFFFF;
-}
-
-.desconto {
-    background: #E4F3EE;
-    color: #7BB3A0;
-    font-size: 11px;
-    padding: 2px 6px;
-    border-radius: 99px;
-    margin-left: 4px;
-}
-
-/* Grid de Cards */
-.grid-planos {
-    display: flex;
-    gap: 24px;
-    max-width: 1280px;
-    width: 100%;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.card-plano {
-    flex: 1;
-    background: #FFFFFF;
-    border: 1px solid #D6E7F5;
-    border-radius: 20px;
-    padding: 32px;
-    position: relative;
-    box-shadow: 0px 2px 20px rgba(92, 136, 191, 0.05);
-    display: flex;
-    flex-direction: column;
-}
-
-.card-destaque {
-    border: 2px solid #5C88BF;
-    box-shadow: 0px 20px 60px rgba(92, 136, 191, 0.13);
-}
-
-.badge-destaque {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #5C88BF;
+    background: var(--cor-principal);
     color: white;
     font-size: 11px;
     font-weight: 700;
@@ -396,7 +278,7 @@
     margin-bottom: 12px;
 }
 
-.icon-cinza { background: #F2F7FB; }
+.icon-cinza { background: var(--grad-2); }
 .icon-azul { background: rgba(92, 136, 191, 0.13); }
 .icon-verde { background: rgba(123, 179, 160, 0.13); }
 
@@ -425,8 +307,7 @@
     font-weight: 400;
 }
 
-.preco-azul { color: #5C88BF; }
-
+.preco-azul { color: var(--cor-principal); }
 .preco-verde { color: #7BB3A0; }
 
 /* Listas */
@@ -448,7 +329,7 @@
 .check {
     width: 20px;
     height: 20px;
-    background: #F2F7FB;
+    background: var(--grad-2);
     border-radius: 6px;
     display: inline-flex;
     justify-content: center;
@@ -457,8 +338,15 @@
     color: #5A6F84;
 }
 
-.check-azul { background: rgba(92, 136, 191, 0.13); color: #5C88BF; }
-.check-verde { background: rgba(123, 179, 160, 0.13); color: #7BB3A0; }
+.check-azul {
+    background: rgba(92, 136, 191, 0.13);
+    color: var(--cor-principal);
+}
+
+.check-verde {
+    background: rgba(123, 179, 160, 0.13);
+    color: #7BB3A0;
+}
 
 /* Botões */
 .btn-card {
@@ -474,11 +362,11 @@
 .btn-outline {
     background: transparent;
     border: 2px solid #D6E7F5;
-    color: #5C88BF;
+    color: var(--cor-principal);
 }
 
 .btn-azul {
-    background: #5C88BF;
+    background: var(--cor-principal);
     color: white;
     box-shadow: 0px 6px 20px rgba(92, 136, 191, 0.25);
 }
