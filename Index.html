@@ -1074,4 +1074,211 @@
 
 </body>
 
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="conteudo">
+
+        <!-- Cabeçalho -->
+        <div class="badge-tag">
+            <span class="quem-usa">Quem usa o Singular</span>
+        </div>
+        <h1 class="titulo">Pessoas reais,<br />mudanças reais.</h1>
+
+        <!-- Seção Pacientes e Familiares -->
+        <div class="categoria">
+            <p class="subtitulo1">Pacientes e familiares</p>
+        </div>
+
+        <div class="lista-cards">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="estrelas">★★★★★</div>
+                <p class="depoimento1">"Finalmente uma ferramenta que entende que eu preciso de previsibilidade. A
+                    decomposição de tarefas mudou minha vida."</p>
+                <div class="autor">
+                    <img src="imagens uc2/usuaria - tea.jpeg" alt="Foto de Larissa">
+                    <div>
+                        <div class="nome1">Larissa M., 24</div>
+                        <div class="tag1">Autista nível 1</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="estrelas">★★★★★</div>
+                <p class="depoimento2">"O acompanhamento dentro do app foi um divisor de águas. Não preciso mais lidar
+                    com links externos ou apps desconhecidos."</p>
+                <div class="autor">
+                    <img src="imagens uc2/usuario 1 TEA TDH.jpeg" alt="Foto de Tomás">
+                    <div>
+                        <div class="nome2">Tomás R., 31</div>
+                        <div class="tag2">TDAH + TEA</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="estrelas">★★★★★</div>
+                <p class="depoimento3">"Meu filho ama os pictogramas. Os meltdowns diminuíram muito depois que começamos
+                    a usar o Singular."</p>
+                <div class="autor">
+                    <img src="imagens uc2/mae de tea.jpeg" alt="Foto de Fernanda">
+                    <div>
+                        <div class="nome3">Fernanda K.</div>
+                        <div class="tag3">Mãe do Pedro, 8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Profissionais de Saúde -->
+        <div class="categoria">
+            <p class="subtitulo2">Profissionais de saúde</p>
+        </div>
+
+        <div class="lista-cards">
+            <!-- Card 4 -->
+            <div class="card card-profissional">
+                <div class="card-topo">
+                    <div class="estrelas-prof">★★★★★</div>
+                    <span class="selo-prof">Profissional</span>
+                </div>
+                <p class="depoimento4">"O painel de relatórios facilitou demais o meu trabalho. Antes eu perdia tempo
+                    lendo anotações espalhadas — agora o resumo de IA já me entrega os pontos críticos antes de cada
+                    sessão."</p>
+                <div class="autor">
+                    <img src="imagens uc2/img - terapeuta.jpeg" alt="Foto de Dra. Camila">
+                    <div>
+                        <div class="nome4">Dra. Camila Rocha</div>
+                        <div class="tag4">Psicóloga · CRP 06/123456</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card card-profissional">
+                <div class="card-topo">
+                    <div class="estrelas-prof">★★★★★</div>
+                    <span class="selo-prof">Profissional</span>
+                </div>
+                <p class="depoimento5">"Consigo acompanhar a rotina dos meus pacientes entre as sessões em tempo real. A
+                    aderência deles melhorou e eu chego nas consultas muito mais preparado com dados concretos."</p>
+                <div class="autor">
+                    <img src="imagens uc2/rafael.jpeg" alt="Foto de Dr. Rafael">
+                    <div>
+                        <div class="nome5">Dr. Rafael Mendes</div>
+                        <div class="tag5">Neuropsicólogo · CRP 08/54321</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card card-profissional">
+                <div class="card-topo">
+                    <div class="estrelas-prof">★★★★★</div>
+                    <span class="selo-prof">Profissional</span>
+                </div>
+                <p class="depoimento6">"As observações clínicas que registro entre sessões ficam todas organizadas no
+                    perfil do paciente. É a ferramenta que eu precisava para conectar o que acontece no app com o que
+                    trabalho na clínica."</p>
+                <div class="autor">
+                    <img src="imagens uc2/beatriz.jpeg" alt="Foto de Fga. Beatriz">
+                    <div>
+                        <div class="nome6">Fga. Beatriz Lemos</div>
+                        <div class="tag6">Fonoaudióloga · CRFa 2/18904</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="container-planos">
+
+        <!-- Cabeçalho -->
+        <div class="badge-planos">
+            <span>Planos</span>
+        </div>
+        <h1 class="titulo-planos">Simples assim.</h1>
+
+        <!-- Selector Usuário / Profissional -->
+        <div class="toggle-container" role="group" aria-label="Escolha o tipo de plano">
+            <button class="btn-toggle ativo" type="button" data-mode="usuario" aria-pressed="true">Usuário</button>
+            <button class="btn-toggle" type="button" data-mode="profissional" aria-pressed="false">Profissional</button>
+        </div>
+
+        <!-- Grid de Cards de Planos -->
+        <div class="grid-planos">
+
+            <!-- Card Gratuito -->
+            <div class="card-plano" data-plan-card="0">
+                <div class="icone-plano icon-cinza"></div>
+                <h2 class="nome-plano" data-field="name">Gratuito</h2>
+                <div class="preco-plano" data-field="price">Grátis</div>
+
+                <ul class="lista-recursos" data-field="features">
+                    <li><span class="check">✓</span> Rotina diária básica</li>
+                    <li><span class="check">✓</span> bloco de notas apenas 3 anotações</li>
+                    <li><span class="check">✓</span> lembretes sem suporte de IA</li>
+                    <li><span class="check">✓</span> sem descontos nas consultas</li>
+                </ul>
+
+                <button class="btn-card btn-outline">Criar conta grátis</button>
+            </div>
+
+            <!-- Card Essencial -->
+            <div class="card-plano card-destaque" data-plan-card="1">
+                <span class="badge-destaque" data-field="badge">Mais popular</span>
+                <div class="icone-plano icon-azul"></div>
+                <p class="tag-sub" data-field="tag">Mais popular</p>
+                <h2 class="nome-plano" data-field="name">Essencial</h2>
+                <div class="preco-plano preco-azul" data-field="price">R$29 <span>/mês</span></div>
+
+                <ul class="lista-recursos" data-field="features">
+                    <li><span class="check check-azul">✓</span> Rotina ilimitada</li>
+                    <li><span class="check check-azul">✓</span> IA atipica ( com suporte na<br /> preparo da rotina)
+                    </li>
+                    <li><span class="check check-azul">✓</span> Diário de humor</li>
+                    <li><span class="check check-azul">✓</span> Bloco de notas ilimitado</li>
+                    <li><span class="check check-azul">✓</span> Descontos básicos em consultas</li>
+                </ul>
+
+                <button class="btn-card btn-azul">Assinar agora</button>
+            </div>
+
+            <!-- Card Acompanhamento -->
+            <div class="card-plano" data-plan-card="2">
+                <div class="icone-plano icon-verde"></div>
+                <p class="tag-sub" data-field="tag">Completo</p>
+                <h2 class="nome-plano" data-field="name">Acompanhamento</h2>
+                <div class="preco-plano preco-verde" data-field="price">R$49 <span>/mês</span></div>
+
+                <ul class="lista-recursos" data-field="features">
+                    <li><span class="check check-verde">✓</span> Tudo do Essencial</li>
+                    <li><span class="check check-verde">✓</span> Descontos exclusivos e promoções <br />relampagos</li>
+                    <li><span class="check check-verde">✓</span> Compartilhamento c/ profissonais</li>
+                    <li><span class="check check-verde">✓</span> Prontuario e diario de progresso</li>
+                </ul>
+
+                <button class="btn-card btn-verde">Assinar agora</button>
+            </div>
+
+        </div>
+
+        <!-- Rodapé da Seção -->
+        <p class="nota-rodape">Sem cartão de crédito no plano gratuito · Cancele quando quiser</p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</body>
+
 </html>
