@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SinguLAR - Criar Conta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CadastroProfissional.css" type="text/css">
+</head>
+<body class="fundo">  
+    <main class="login">
+        <header class="header">
+            <div class="textoheader">
+                <h1>Criar sua conta</h1>
+                <p>Junte-se à SinguLAR e gerencie seus pacientes.</p>
+            </div>
+        </header>
+
+        <form id="form-cadastro" class="loginformulario">
+            <div class="input">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="input">
+                <label for="email">E-mail Profissional</label>
+                <input type="email" id="email" placeholder="email@clinica.com" required>
+            </div>
+            <div class="input">
+                <label for="crp">CRP / CRM</label>
+                <input type="text" id="crp" placeholder="Ex: CRP 06/123456" required>
+            </div>
+            <div class="input">
+                <label for="senha">Criar Senha</label>
+                <input type="password" id="senha" placeholder="Mínimo 8 caracteres" required>
+            </div>
+            <button type="submit" class="enviar">Cadastrar e Acessar</button>
+        </form>
+
+        <footer class="footer">
+            <p>Já possui uma conta?</p>
+            <button type="button" class="demo" onclick="window.location.href='index.html'">Voltar para a Home</button>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('form-cadastro').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            window.location.href = 'painel.html'; 
+        });
+    </script>
+</body>
+</html>

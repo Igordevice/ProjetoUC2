@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SinguLAR - Painel Profissional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="PainelProfissional.css" type="text/css">
+</head>
+<body class="fundo-app">
+
+    <main class="painel-geral">
+        
+        <header class="cabecalho-painel">
+            <div class="info-doutora">
+                <button id="btn-menu-mobile" class="botao-mobile">☰</button>
+                <div class="textos-doutora">
+                    <h1>Painel Profissional — Dra. Camila Rocha</h1>
+                    <p>CRP 06/123456</p>
+                </div>
+            </div>
+
+            <div class="controles-topo">
+                <button id="btn-dark-mode" class="botao-icone">
+    <span class="ant-design--moon-filled"></span>
+</button>
+                <button class="botao-fechar" onclick="window.location.href='index.html'">✕</button>
+            </div>
+        </header>
+
+        <div class="corpo-painel">
+            
+            <aside class="barra-lateral" id="sidebar">
+                <div class="titulo-lateral">
+                    <h2>Pacientes</h2>
+                    <input type="text" id="busca-paciente" class="input-busca" placeholder="Buscar paciente...">
+                </div>
+                
+                <ul class="lista-pacientes" id="lista-pacientes-ul"></ul>
+            </aside>
+
+            <section class="area-conteudo">
+                
+                <header class="cabecalho-paciente">
+                    <div class="perfil-paciente-aberto">
+                        <img src="imagens/larissa.jpeg" alt="Foto Ana Luiza" class="foto-grande">
+                        <div class="info-paciente-aberto">
+                            <h2>Larissa M.</h2>
+                            <p>TEA Nível 1 · 24 anos · desde Mar 2026</p>
+                        </div>
+                    </div>
+                </header>
+
+                <nav class="menu-abas">
+                    <button class="aba ativa" data-alvo="aba-relatorios">Relatórios</button>
+                    <button class="aba" data-alvo="aba-observacoes">Observações</button>
+                    <button class="aba" data-alvo="aba-dashboards">Dashboards</button>
+                    <button class="aba" data-alvo="aba-resumo-ia">Resumo IA</button>
+                </nav>
+
+                <div class="area-rolavel-conteudo">
+                    
+                    <div id="aba-relatorios" class="conteudo-aba ativa">
+                        <div class="topo-relatorios">
+                            <h3 id="contador-relatorios">3 relatórios registrados</h3>
+                            <button id="btn-novo-relatorio" class="botao-novo-relatorio">Novo relatório</button>
+                        </div>
+                        <ul class="lista-relatorios" id="container-relatorios">
+                        </ul>
+                    </div>
+
+                    <div id="aba-observacoes" class="conteudo-aba">
+                        <div class="topo-observacoes">
+                            <h3>Nova observação rápida</h3>
+                        </div>
+                        <div class="campo-adicionar">
+                                <input type="text" id="input-nova-obs" placeholder="Registre uma observação ou ponto de atenção...">
+                                <button id="btn-nova-obs" class="btn-primario">Adicionar observação</button>
+                        </div>
+                        <ul class="lista-timeline" id="container-observacoes">
+                        </ul>
+                    </div>
+
+                    <!-- ABA 3: DASHBOARDS -->
+<div id="aba-dashboards" class="conteudo-aba">
+    
+    <!-- As "bolinhas" do topo voltaram aqui! -->
+    <div class="metricas-rapidas">
+        <div class="cartao-metrica"><div class="circulo-porcentagem" style="border-color: #6BBF8A;">78%</div><span>Calmo</span></div>
+        <div class="cartao-metrica"><div class="circulo-porcentagem" style="border-color: #6BAEC4;">58%</div><span>Cansado</span></div>
+        <div class="cartao-metrica"><div class="circulo-porcentagem" style="border-color: #E8C547;">37%</div><span>Agitado</span></div>
+        <div class="cartao-metrica"><div class="circulo-porcentagem" style="border-color: #E07070;">07%</div><span>Sobrecarga</span></div>
+    </div>
+
+    <div class="painel-graficos-vidro">
+        <div class="decoracao-grafico circulo"></div>
+        
+        <div class="grid-graficos">
+            <!-- S: Subjetivo -->
+            <div class="caixa-vidro padrao">
+                <h3>Subjetivo (Sintomas)</h3>
+                <div class="container-grafico">
+                    <canvas id="graficoSubjetivo"></canvas>
+                </div>
+            </div>
+            
+            <!-- O: Objetivo -->
+            <div class="caixa-vidro padrao">
+                <h3>Objetivo (Evolução)</h3>
+                <div class="container-grafico">
+                    <canvas id="graficoObjetivo"></canvas>
+                </div>
+            </div>
+
+            <!-- A: Avaliação -->
+            <div class="caixa-vidro padrao">
+                <h3>Avaliação (CIDs)</h3>
+                <div class="container-grafico">
+                    <canvas id="graficoAvaliacao"></canvas>
+                </div>
+            </div>
+
+            <!-- P: Plano -->
+            <div class="caixa-vidro padrao">
+                <h3>Plano (Resolução)</h3>
+                <div class="container-grafico">
+                    <canvas id="graficoPlano"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <div id="aba-resumo-ia" class="conteudo-aba">
+                        <div class="topo-resumo">
+                            <div class="titulo-ia">
+                                <div>
+                                    <h3>Resumo clínico — Inteligência Artificial</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid-resumo">
+                            <div class="cartao-ia atencao">
+                                <h4><span class="ponto-ia"></span> Pontos de atenção</h4>
+                                <ul><li>Sobrecarga recorrente às segundas-feiras.</li></ul>
+                            </div>
+                            <div class="cartao-ia progressos">
+                                <h4><span class="ponto-ia"></span> Progressos documentados</h4>
+                                <ul><li>78% de aderência à rotina.</li></ul>
+                            </div>
+                        </div>
+                        <div class="aviso-ia">
+                            <p>Este resumo foi gerado com base nos registros disponíveis. Use como apoio clínico complementar.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

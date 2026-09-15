@@ -1,0 +1,30 @@
+:root {
+    --cor-principal: #5C88BF;
+    --grad-1: #E8F1F8;
+    --grad-2: #F2F7FB;
+    --grad-3: #E4F3EE;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Lexend', sans-serif; }
+
+.fundo {
+    width: 100vw; height: 100vh;
+    background: linear-gradient(160deg, #1A2E42 0%, rgba(58, 89, 126, 0.97) 50%, rgba(92, 136, 191, 0.93) 100%);
+    display: flex; justify-content: center; align-items: center; padding: 24px;
+}
+
+.login { width: 100%; max-width: 420px; background: white; padding: 40px; border-radius: 28px; box-shadow: 0px 40px 100px rgba(0, 0, 0, 0.40); position: relative; display: flex; flex-direction: column; }
+.header { margin-bottom: 20px; }
+.textoheader h1 { color: #1C2F44; font-size: 24px; font-weight: 800; line-height: 30px; margin-bottom: 4px;}
+.textoheader p { color: #5A6F84; font-size: 13px; font-weight: 400; }
+.loginformulario { display: flex; flex-direction: column; gap: 14px; }
+.input { display: flex; flex-direction: column; gap: 7px; }
+.input label { color: #5A6F84; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.input input { width: 100%; height: 50px; padding: 0 16px; background: var(--grad-2); border: 1px solid #D6E7F5; border-radius: 12px; color: #1C2F44; font-size: 15px; outline: none; transition: border-color 0.2s; }
+.input input:focus { border-color: var(--cor-principal); }
+.enviar { margin-top: 8px; width: 100%; padding: 15px; background: var(--cor-principal); border: none; border-radius: 12px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+.enviar:hover { background: #4A6E9B; }
+.footer { margin-top: 22px; padding-top: 18px; border-top: 1px solid #D6E7F5; display: flex; flex-direction: column; gap: 8px; }
+.footer p { color: #5A6F84; font-size: 13px; font-weight: 600; text-align: center; }
+.demo { width: 100%; padding: 12px 14px; background: var(--grad-1); border: 1px solid #D6E7F5; border-radius: 12px; color: var(--cor-principal); font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+.demo:hover { background: #D6E7F5; }
