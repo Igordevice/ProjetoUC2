@@ -78,14 +78,57 @@ body {
     font-weight: 600;
 }
 
-#botao {
-    position: relative;
+/* Contêiner que alinha os botões lado a lado */
+.area-botao {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: row;
-    width: 140px;
-    padding-right: 120px;
+    gap: 16px;
+    /* Espaço entre os botões */
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo individual de cada botão */
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* Espaço entre o coração e o texto */
+
+    background-color: #5582ba;
+    /* Tom de azul do layout */
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    /* Cantos arredondados */
+
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(85, 130, 186, 0.25);
+    /* Sombra suave */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Efeito ao passar o mouse */
+.botao:hover {
+    background-color: #4872a6;
+}
+
+/* Efeito ao clicar */
+.botao:active {
+    transform: scale(0.98);
+}
+
+/* Estilo do ícone de coração */
+.icone {
+    font-size: 14px;
+    line-height: 1;
 }
 
 .cores {
